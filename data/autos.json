@@ -1,0 +1,322 @@
+[
+  {
+    "id": "bmw-m3-e30",
+    "marca": "BMW",
+    "modelo": "M3 E30",
+    "categoria": "CLASSICS",
+    "nombre": "BMW M3 E30",
+    "descripcion": "El BMW M3 E30 es considerado por muchos como el mejor coche de conducción jamás fabricado. Lanzado en 1986, este icono del automovilismo combinaba un motor de 4 cilindros de alto rendimiento con un chasis equilibrado.",
+    "especificaciones": {
+      "motor": "2.3L I4 Turbo",
+      "potencia": "235 HP",
+      "torque": "320 Nm",
+      "0-100": "6.9s",
+      "velocidad_maxima": "245 km/h",
+      "peso": "1,365 kg",
+      "anio": "1986-1991"
+    },
+    "imagenes": {
+      "principal": "/autos/bmw/m3-e30/principal.jpg",
+      "galeria": [
+        "/autos/bmw/m3-e30/galeria-1.jpg",
+        "/autos/bmw/m3-e30/galeria-2.jpg",
+        "/autos/bmw/m3-e30/galeria-3.jpg",
+        "/autos/bmw/m3-e30/galeria-4.jpg"
+      ]
+    }
+  },
+  {
+    "id": "bmw-m4-g82",
+    "marca": "BMW",
+    "modelo": "M4 G82",
+    "categoria": "PERFORMANCE",
+    "nombre": "BMW M4 G82",
+    "descripcion": "El BMW M4 G82 representa la evolución del legendario M3. Con su motor S58 de 6 cilindros en línea y tecnología M xDrive, ofrece un rendimiento excepcional tanto en pista como en carretera.",
+    "especificaciones": {
+      "motor": "3.0L I6 Twin-Turbo",
+      "potencia": "510 HP",
+      "torque": "650 Nm",
+      "0-100": "3.5s",
+      "velocidad_maxima": "290 km/h",
+      "peso": "1,725 kg",
+      "anio": "2020-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/bmw/m4-g82/principal.jpg",
+      "galeria": [
+        "/autos/bmw/m4-g82/galeria-1.jpg",
+        "/autos/bmw/m4-g82/galeria-2.jpg",
+        "/autos/bmw/m4-g82/galeria-3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "audi-r8",
+    "marca": "AUDI",
+    "modelo": "R8 GT",
+    "categoria": "SUPERCARS",
+    "nombre": "Audi R8 GT",
+    "descripcion": "El Audi R8 GT es un superdeportivo que combina la tecnología de F1 con el lujo de un GT. Su motor V10 atmosférico ofrece una experiencia de conducción única.",
+    "especificaciones": {
+      "motor": "5.2L V10",
+      "potencia": "602 HP",
+      "torque": "560 Nm",
+      "0-100": "3.1s",
+      "velocidad_maxima": "330 km/h",
+      "peso": "1,695 kg",
+      "anio": "2015-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/audi/r8/principal.jpg",
+      "galeria": [
+        "/autos/audi/r8/galeria-1.jpg",
+        "/autos/audi/r8/galeria-2.jpg",
+        "/autos/audi/r8/galeria-3.jpg",
+        "/autos/audi/r8/galeria-4.jpg"
+      ]
+    }
+  },
+  {
+    "id": "pagani-huayra",
+    "marca": "PAGANI",
+    "modelo": "HUAYRA",
+    "categoria": "HYPERCARS",
+    "nombre": "Pagani Huayra",
+    "descripcion": "El Pagani Huayra es una obra de arte sobre ruedas. Con su diseño inspirado en la aerodinámica y su motor V12 de AMG, representa la cúspide de la ingeniería automotriz italiana.",
+    "especificaciones": {
+      "motor": "6.0L V12 Twin-Turbo",
+      "potencia": "720 HP",
+      "torque": "1,000 Nm",
+      "0-100": "3.2s",
+      "velocidad_maxima": "370 km/h",
+      "peso": "1,350 kg",
+      "anio": "2012-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/pagani/huayra/principal.jpg",
+      "galeria": [
+        "/autos/pagani/huayra/galeria-1.jpg",
+        "/autos/pagani/huayra/galeria-2.jpg",
+        "/autos/pagani/huayra/galeria-3.jpg",
+        "/autos/pagani/huayra/galeria-4.jpg",
+        "/autos/pagani/huayra/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "bugatti-chiron",
+    "marca": "BUGATTI",
+    "modelo": "CHIRON",
+    "categoria": "HYPERCARS",
+    "nombre": "Bugatti Chiron",
+    "descripcion": "El Bugatti Chiron es el sucesor del legendario Veyron. Con su motor W16 de 8 litros y 1,500 caballos de fuerza, es uno de los coches más rápidos y exclusivos del mundo.",
+    "especificaciones": {
+      "motor": "8.0L W16 Quad-Turbo",
+      "potencia": "1,500 HP",
+      "torque": "1,600 Nm",
+      "0-100": "2.4s",
+      "velocidad_maxima": "420 km/h",
+      "peso": "1,995 kg",
+      "anio": "2016-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/bugatti/chiron/principal.jpg",
+      "galeria": [
+        "/autos/bugatti/chiron/galeria-1.jpg",
+        "/autos/bugatti/chiron/galeria-2.jpg",
+        "/autos/bugatti/chiron/galeria-3.jpg",
+        "/autos/bugatti/chiron/galeria-4.jpg",
+        "/autos/bugatti/chiron/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "porsche-911-gt3",
+    "marca": "PORSCHE",
+    "modelo": "911 GT3",
+    "categoria": "PERFORMANCE",
+    "nombre": "Porsche 911 GT3",
+    "descripcion": "El Porsche 911 GT3 es el coche de pista definitivo para la carretera. Con su motor de alta rotación y chasis de precisión, ofrece una experiencia de conducción incomparable.",
+    "especificaciones": {
+      "motor": "4.0L Flat-6",
+      "potencia": "502 HP",
+      "torque": "469 Nm",
+      "0-100": "3.2s",
+      "velocidad_maxima": "318 km/h",
+      "peso": "1,435 kg",
+      "anio": "2021-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/porsche/911-gt3/principal.jpg",
+      "galeria": [
+        "/autos/porsche/911-gt3/galeria-1.jpg",
+        "/autos/porsche/911-gt3/galeria-2.jpg",
+        "/autos/porsche/911-gt3/galeria-3.jpg",
+        "/autos/porsche/911-gt3/galeria-4.jpg",
+        "/autos/porsche/911-gt3/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "ferrari-f40",
+    "marca": "FERRARI",
+    "modelo": "F40",
+    "categoria": "CLASSICS",
+    "nombre": "Ferrari F40",
+    "descripcion": "El Ferrari F40 es el último auto aprobado por Enzo Ferrari. Con su carrocería de fibra de carbono y Kevlar y motor V8 biturbo, es un ícono de los superdeportivos de los 80.",
+    "especificaciones": {
+      "motor": "2.9L V8 Twin-Turbo",
+      "potencia": "478 HP",
+      "torque": "577 Nm",
+      "0-100": "4.1s",
+      "velocidad_maxima": "324 km/h",
+      "peso": "1,100 kg",
+      "anio": "1987-1992"
+    },
+    "imagenes": {
+      "principal": "/autos/ferrari/f40/principal.jpg",
+      "galeria": [
+        "/autos/ferrari/f40/galeria-1.jpg",
+        "/autos/ferrari/f40/galeria-2.jpg",
+        "/autos/ferrari/f40/galeria-3.jpg",
+        "/autos/ferrari/f40/galeria-4.jpg",
+        "/autos/ferrari/f40/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "lamborghini-huracan",
+    "marca": "LAMBORGHINI",
+    "modelo": "HURACÁN",
+    "categoria": "SUPERCARS",
+    "nombre": "Lamborghini Huracán",
+    "descripcion": "El Lamborghini Huracán combina el diseño agresivo característico de la marca con un motor V10 naturalmente aspirado que ofrece una experiencia de conducción emocionante.",
+    "especificaciones": {
+      "motor": "5.2L V10",
+      "potencia": "640 HP",
+      "torque": "600 Nm",
+      "0-100": "2.9s",
+      "velocidad_maxima": "325 km/h",
+      "peso": "1,422 kg",
+      "anio": "2014-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/lamborghini/huracan/principal.jpg",
+      "galeria": [
+        "/autos/lamborghini/huracan/galeria-1.jpg",
+        "/autos/lamborghini/huracan/galeria-2.jpg",
+        "/autos/lamborghini/huracan/galeria-3.jpg",
+        "/autos/lamborghini/huracan/galeria-4.jpg",
+        "/autos/lamborghini/huracan/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "nissan-gtr",
+    "marca": "NISSAN",
+    "modelo": "GT-R",
+    "categoria": "SUPERCARS",
+    "nombre": "Nissan GT-R R35",
+    "descripcion": "El Nissan GT-R R35 es conocido como 'Godzilla' por su increíble rendimiento. Con su motor V6 biturbo y sistema AWD, ha establecido numerosos récords en pistas de todo el mundo.",
+    "especificaciones": {
+      "motor": "3.8L V6 Twin-Turbo",
+      "potencia": "565 HP",
+      "torque": "633 Nm",
+      "0-100": "2.7s",
+      "velocidad_maxima": "315 km/h",
+      "peso": "1,745 kg",
+      "anio": "2007-presente"
+    },
+    "imagenes": {
+      "principal": "/autos/nissan/gtr/principal.jpg",
+      "galeria": [
+        "/autos/nissan/gtr/galeria-1.jpg",
+        "/autos/nissan/gtr/galeria-2.jpg",
+        "/autos/nissan/gtr/galeria-3.jpg",
+        "/autos/nissan/gtr/galeria-4.jpg",
+        "/autos/nissan/gtr/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "toyota-supra-mk4",
+    "marca": "TOYOTA",
+    "modelo": "SUPRA MK4",
+    "categoria": "CLASSICS",
+    "nombre": "Toyota Supra MK4",
+    "descripcion": "El Toyota Supra MK4 es un ícono de la cultura automotriz japonesa. Con su motor 2JZ legendary y diseño icónico, es uno de los autos más modificados y admirados del mundo.",
+    "especificaciones": {
+      "motor": "3.0L I6 Twin-Turbo",
+      "potencia": "320 HP",
+      "torque": "440 Nm",
+      "0-100": "4.6s",
+      "velocidad_maxima": "250 km/h",
+      "peso": "1,490 kg",
+      "anio": "1993-1998"
+    },
+    "imagenes": {
+      "principal": "/autos/toyota/supra-mk4/principal.jpg",
+      "galeria": [
+        "/autos/toyota/supra-mk4/galeria-1.jpg",
+        "/autos/toyota/supra-mk4/galeria-2.jpg",
+        "/autos/toyota/supra-mk4/galeria-3.jpg",
+        "/autos/toyota/supra-mk4/galeria-4.jpg",
+        "/autos/toyota/supra-mk4/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "honda-nsx",
+    "marca": "HONDA",
+    "modelo": "NSX",
+    "categoria": "SUPERCARS",
+    "nombre": "Honda NSX",
+    "descripcion": "El Honda NSX fue el primer superdeportivo japonés que compitió con los mejores de Europa. Con su motor V6 y chasis de aluminio, redefinió lo que un coche japonés podía lograr.",
+    "especificaciones": {
+      "motor": "3.0L V6",
+      "potencia": "274 HP",
+      "torque": "284 Nm",
+      "0-100": "5.0s",
+      "velocidad_maxima": "270 km/h",
+      "peso": "1,350 kg",
+      "anio": "1990-2005"
+    },
+    "imagenes": {
+      "principal": "/autos/honda/nsx/principal.jpg",
+      "galeria": [
+        "/autos/honda/nsx/galeria-1.jpg",
+        "/autos/honda/nsx/galeria-2.jpg",
+        "/autos/honda/nsx/galeria-3.jpg",
+        "/autos/honda/nsx/galeria-4.jpg",
+        "/autos/honda/nsx/galeria-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "mazda-rx7",
+    "marca": "MAZDA",
+    "modelo": "RX-7 FD",
+    "categoria": "CLASSICS",
+    "nombre": "Mazda RX-7 FD",
+    "descripcion": "El Mazda RX-7 FD es famoso por su motor rotativo y diseño elegante. Con su chasis ligero y equilibrado, es uno de los mejores autos de conducción jamás fabricados.",
+    "especificaciones": {
+      "motor": "1.3L Rotary Twin-Turbo",
+      "potencia": "255 HP",
+      "torque": "294 Nm",
+      "0-100": "5.0s",
+      "velocidad_maxima": "250 km/h",
+      "peso": "1,300 kg",
+      "anio": "1992-2002"
+    },
+    "imagenes": {
+      "principal": "/autos/mazda/rx7/principal.jpg",
+      "galeria": [
+        "/autos/mazda/rx7/galeria-1.jpg",
+        "/autos/mazda/rx7/galeria-2.jpg",
+        "/autos/mazda/rx7/galeria-3.jpg",
+        "/autos/mazda/rx7/galeria-4.jpg",
+        "/autos/mazda/rx7/galeria-5.jpg"
+      ]
+    }
+  }
+]
