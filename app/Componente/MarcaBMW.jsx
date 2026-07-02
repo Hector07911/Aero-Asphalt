@@ -11,7 +11,7 @@ export default function MarcaBMW() {
           <div className="lg:col-span-8">
             <div className="relative">
               <img 
-                src="/marcas/bmw-m4/Img-principal.png.png" 
+                src="/marcas/bmw-m4/img-principal.png" 
                 alt="BMW M4 G82" 
                 className="w-full h-auto object-cover"
               />
@@ -33,17 +33,17 @@ export default function MarcaBMW() {
           {/* Imágenes secundarias - ocupan 4 columnas en desktop */}
           <div className="lg:col-span-4 flex flex-col gap-4">
             <img 
-              src="/marcas/bmw-m4/img-second.jpg.jpg" 
+              src="/marcas/bmw-m4/img-second.jpg" 
               alt="BMW M4 detalle" 
               className="w-full h-48 object-cover"
             />
             <img 
-              src="/marcas/bmw-m4/img-second-2.png.png" 
+              src="/marcas/bmw-m4/img-second-2.png" 
               alt="BMW M4 interior" 
               className="w-full h-48 object-cover"
             />
             <img 
-              src="/marcas/bmw-m4/img-second-3.png.png" 
+              src="/marcas/bmw-m4/img-second-3.png" 
               alt="BMW M4 motor" 
               className="w-full h-48 object-cover"
             />
