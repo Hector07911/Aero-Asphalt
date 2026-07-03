@@ -25,6 +25,7 @@ function CarImage({ src, alt, className, fill, priority }) {
       src={src}
       alt={alt}
       fill={fill}
+      sizes={fill ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : undefined}
       className={className}
       priority={priority}
       onError={() => setImageError(true)}
@@ -73,9 +74,9 @@ export default function AutoDetalle() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] pt-[120px] pb-20">
+    <div className="min-h-screen bg-black pt-[120px] pb-20">
       {/* Navegación */}
-      <div className="px-10 mb-8">
+      <div className="px-4 md:px-12 lg:px-20 mb-8">
         <Link 
           href="/coleccion"
           className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[2px] text-neutral-400 hover:text-white transition-colors"
@@ -85,11 +86,11 @@ export default function AutoDetalle() {
       </div>
 
       {/* Header */}
-      <div className="px-10 mb-12">
+      <div className="px-4 md:px-12 lg:px-20 mb-12">
         <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-4">
           {auto.marca}
         </div>
-        <h1 className="font-bold text-[clamp(48px,6vw,72px)] tracking-[3px] text-white leading-none mb-4">
+        <h1 className="font-bold text-[clamp(40px,5vw,64px)] tracking-tighter text-white leading-none mb-4">
           {auto.nombre}
         </h1>
         <div className="flex items-center gap-4 font-mono text-[12px] tracking-[2px] text-white/40">
@@ -99,64 +100,38 @@ export default function AutoDetalle() {
         </div>
       </div>
 
-      {/* Imagen Principal con Lightbox */}
-      <div className="px-10 mb-8">
-        <div 
-          className="relative aspect-video bg-[#111] border border-white/5 overflow-hidden cursor-pointer group"
-          onClick={() => handleImageClick(0)}
-        >
-          <CarImage
-            src={auto.imagenes.principal}
-            alt={auto.nombre}
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            fill
-            priority
-          />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="border border-white/30 bg-black/50 text-white px-6 py-3 font-mono text-xs tracking-widest">
-                VER EN GRANDE
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Descripción y Especificaciones */}
-      <div className="px-10 mb-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
-        {/* Descripción */}
-        <div className="lg:col-span-2">
-          <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-6">
-            SOBRE EL AUTO
-          </div>
-          <p className="text-white/60 text-lg leading-relaxed mb-8">
-            {auto.descripcion}
-          </p>
-
-          {/* Especificaciones */}
-          <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-6">
-            ESPECIFICACIONES
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {Object.entries(auto.especificaciones).map(([key, value]) => (
-              <div key={key} className="bg-[#111] border border-white/5 p-5">
-                <div className="font-mono text-[10px] tracking-[2px] text-white/40 mb-2">
-                  {key.replace(/_/g, ' ').toUpperCase()}
-                </div>
-                <div className="text-white font-bold text-lg">
-                  {value}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mini Galería */}
-        <div className="lg:col-span-1">
+      {/* Layout principal: Galería izquierda, Información derecha */}
+      <div className="px-4 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        {/* Columna izquierda: Galería de imágenes */}
+        <div className="lg:col-span-7">
           <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-6">
             GALERÍA
           </div>
-          <div className="grid grid-cols-2 gap-3">
+          
+          {/* Imagen principal */}
+          <div 
+            className="relative aspect-video bg-[#111] border border-white/5 overflow-hidden cursor-pointer group mb-4"
+            onClick={() => handleImageClick(0)}
+          >
+            <CarImage
+              src={auto.imagenes.principal}
+              alt={auto.nombre}
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              fill
+              priority
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="border border-white/30 bg-black/50 text-white px-6 py-3 font-mono text-xs tracking-widest">
+                  VER EN GRANDE
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Galería secundaria */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {auto.imagenes.galeria.map((imagen, index) => (
               <div 
                 key={index}
@@ -172,6 +147,42 @@ export default function AutoDetalle() {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Columna derecha: Información */}
+        <div className="lg:col-span-5">
+          <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-6">
+            INFORMACIÓN
+          </div>
+          
+          {/* Descripción */}
+          <div className="mb-8">
+            <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-4">
+              SOBRE EL AUTO
+            </div>
+            <p className="text-white/60 text-lg leading-relaxed">
+              {auto.descripcion}
+            </p>
+          </div>
+
+          {/* Especificaciones */}
+          <div>
+            <div className="font-mono text-[10px] tracking-[4px] text-neutral-400 mb-6">
+              ESPECIFICACIONES
+            </div>
+            <div className="space-y-3">
+              {Object.entries(auto.especificaciones).map(([key, value]) => (
+                <div key={key} className="bg-[#111] border border-white/5 p-4 flex justify-between items-center">
+                  <div className="font-mono text-[10px] tracking-[2px] text-white/40">
+                    {key.replace(/_/g, ' ').toUpperCase()}
+                  </div>
+                  <div className="text-white font-bold text-lg">
+                    {value}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

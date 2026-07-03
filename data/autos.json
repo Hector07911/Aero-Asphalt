@@ -133,13 +133,13 @@
   {
     "id": "porsche-911-gt3",
     "marca": "PORSCHE",
-    "modelo": "911 GT3",
-    "categoria": "PERFORMANCE",
-    "nombre": "Porsche 911 GT3",
-    "descripcion": "El Porsche 911 GT3 es el coche de pista definitivo para la carretera. Con su motor de alta rotación y chasis de precisión, ofrece una experiencia de conducción incomparable.",
+    "modelo": "911 GT3 RS",
+    "categoria": "SPORTS",
+    "nombre": "Porsche 911 GT3 RS",
+    "descripcion": "El Porsche 911 GT3 RS es el coche de pista definitivo para la carretera. Con su motor de alta rotación y chasis de precisión, ofrece una experiencia de conducción incomparable.",
     "especificaciones": {
       "motor": "4.0L Flat-6",
-      "potencia": "502 HP",
+      "potencia": "525 CV",
       "torque": "469 Nm",
       "0-100": "3.2s",
       "velocidad_maxima": "318 km/h",
@@ -316,6 +316,33 @@
         "/autos/mazda/rx7/galeria-3.jpg",
         "/autos/mazda/rx7/galeria-4.jpg",
         "/autos/mazda/rx7/galeria-5.jpg"
+      ]
+    }
+  }, 
+  { 
+    "id": "mustang-shelby-2020",
+    "marca": "FORD",
+    "modelo": "Mustang",
+    "categoria": "SPORTS",
+    "nombre": "Ford Mustang Shelby GT500",
+    "descripcion": "El Ford Mustang es el icónico muscle car americano que ha sido un símbolo de la velocidad y el estilo durante décadas.",
+    "especificaciones": {
+      "motor": "5.2L V8",
+      "potencia": "760 HP",
+      "torque": "847 Nm",
+      "0-100": "3.5s",
+      "velocidad_maxima": "290 km/h",
+      "peso": "1,500 kg",
+      "anio": "2020-2022"
+    },
+    "imagenes": {
+      "principal": "/autos/mustang/principal.jpg",
+      "galeria": [
+        "/autos/mustang/galeria-1.jpg",
+        "/autos/mustang/galeria-2.jpg",
+        "/autos/mustang/galeria-3.jpg",
+        "/autos/mustang/galeria-4.jpg",
+        "/autos/mustang/galeria-5.jpg"
       ]
     }
   }

@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function FeaturedArticles() {
   return (
     <section className="w-full bg-black py-16 px-4">
@@ -29,6 +31,9 @@ export default function FeaturedArticles() {
               <h3 className="text-white text-lg font-bold tracking-wide leading-snug">
                 Por qué sigue emcionadondo en plena era eléctrica?
               </h3>
+              <Link href="/articulos/renacer-del-v12" className="text-[#c5c5c3] text-xs tracking-[3px] mt-4 inline-block font-mono">
+                LEER MÁS
+              </Link>
             </div>
           </div>
 
@@ -44,6 +49,9 @@ export default function FeaturedArticles() {
               <h3 className="text-white text-lg font-bold tracking-wide leading-snug">
                 Cómo el Porsche 911 ha mantenido su esencia durante más de 60 años.
               </h3>
+              <Link href="/articulos/silueta-perfecta" className="text-[#c5c5c3] text-xs tracking-[3px] mt-4 inline-block font-mono">
+                LEER MÁS
+              </Link>
             </div>
           </div>
 
@@ -59,6 +67,9 @@ export default function FeaturedArticles() {
               <h3 className="text-white text-lg font-bold tracking-wide leading-snug">
                 Qué hace que un automóvil se convierta en leyenda.
               </h3>
+              <Link href="/articulos/leyenda" className="text-[#c5c5c3] text-xs tracking-[3px] mt-4 inline-block font-mono">
+                LEER MÁS
+              </Link>
             </div>
           </div>
         </div>
