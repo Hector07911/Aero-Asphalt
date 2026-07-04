@@ -7,12 +7,12 @@ export default function AboutUs() {
         <h2 className="text-white text-sm tracking-[4px] uppercase mb-4 font-bold">
           Quiénes Somos
         </h2>
-        <p className="text-neutral-400 text-base leading-relaxed mb-6">
+        <p className="text-white/50 text-base leading-relaxed mb-6">
          es un espacio dedicado a la cultura automotriz, donde cada automóvil es apreciado por la historia que representa, la ingeniería que lo hace posible, el diseño que lo convierte en una obra de arte y la pasión que despierta en quienes lo contemplan. No importa la marca, el año o el precio; lo que importa es la emoción que transmite. Cada auto cuenta una historia, y nosotros estamos aquí para contarla.
         </p>
-        <Link 
+        <Link
           href="/equipo"
-          className="text-blue-400 text-sm tracking-[2px] uppercase hover:text-blue-300 transition-colors duration-300"
+          className="text-[#B8963E] text-sm tracking-[2px] uppercase hover:text-[#B8963E]/80 transition-colors duration-300"
         >
           Conocé al equipo
         </Link>

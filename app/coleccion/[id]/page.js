@@ -14,7 +14,7 @@ function CarImage({ src, alt, className, fill, priority }) {
       <div className={`bg-[#1a1a1a] flex items-center justify-center ${className}`}>
         <div className="text-center p-4">
           <div className="text-neutral-400 text-4xl mb-2">🚗</div>
-          <div className="text-neutral-500 text-xs font-mono">IMAGEN NO DISPONIBLE</div>
+          <div className="text-white/50 text-xs font-mono">IMAGEN NO DISPONIBLE</div>
         </div>
       </div>
     );

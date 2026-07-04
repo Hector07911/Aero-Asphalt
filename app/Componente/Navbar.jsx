@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3 cursor-pointer">
             <h1 className="title-35 font-bold flex items-baseline gap-3">
               <span className="text-white">AERO</span>
-              <span className="text-neutral-500">&</span>
+              <span className="text-[#B8963E]">&</span>
               <span className="text-white">ASPHALT</span>
             </h1>
           </div>
@@ -48,8 +48,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`transition-colors duration-300 ${
                   pathname === item.href 
-                    ? 'text-neutral-500' 
-                    : 'text-white hover:text-neutral-500'
+                    ? 'text-[#B8963E]' 
+                    : 'text-white hover:text-[#B8963E]'
                 }`}
               >
                 {item.name}
@@ -67,8 +67,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`transition-colors duration-300 ${
                     pathname === item.href 
-                      ? 'text-orange-500' 
-                      : 'text-white hover:text-orange-500'
+                      ? 'text-[#B8963E]' 
+                      : 'text-white hover:text-[#B8963E]'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

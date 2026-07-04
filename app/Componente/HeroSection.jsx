@@ -1,21 +1,29 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function HeroSection() {
   return (
     <section className="relative w-full h-screen bg-black">
       {/* Video responsive */}
       <div className="absolute inset-0 w-full h-full">
         {/* GIF para móvil */}
-        <img 
+        <Image 
           src="/video_movil.gif" 
           alt="Hero video mobile" 
-          className="w-full h-full object-cover md:hidden"
+          fill
+          sizes="100vw"
+          className="object-cover md:hidden"
+          priority
         />
         {/* GIF para desktop */}
-        <img 
+        <Image 
           src="/video_pc.gif" 
           alt="Hero video desktop" 
-          className="w-full h-full object-cover hidden md:block"
+          fill
+          sizes="100vw"
+          className="object-cover hidden md:block"
+          priority
         />
       </div>
 
@@ -39,7 +47,7 @@ export default function HeroSection() {
           <h2 className="text-[#E6E6E6] text-xl font-bold tracking-widest mb-2">
             PAGANI HUAYRA
           </h2>
-          <h1 className="text-neutral-500 text-6xl font-black tracking-tighter mb-4">
+          <h1 className="text-white text-6xl font-black tracking-tighter mb-4">
             Arte impulsado<br />por la pasión
           </h1>
           <p className="text-neutral-400 text-base font-medium tracking-widest">

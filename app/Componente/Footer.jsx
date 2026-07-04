@@ -9,20 +9,20 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <h1 className="text-white text-2xl font-bold flex items-baseline gap-3">
               <span>AERO</span>
-              <span className="text-neutral-400">&</span>
+              <span className="text-[#B8963E]">&</span>
               <span>ASPHALT</span>
             </h1>
           </div>
 
           {/* Links */}
           <div className="flex items-center gap-8 text-sm text-neutral-400">
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">YouTube</a>
+            <a href="#" className="hover:text-[#B8963E] transition-colors">Instagram</a>
+            <a href="#" className="hover:text-[#B8963E] transition-colors">Twitter</a>
+            <a href="#" className="hover:text-[#B8963E] transition-colors">YouTube</a>
           </div>
 
           {/* Copyright */}
-          <p className="text-neutral-500 text-sm">
+          <p className="text-white/50 text-sm">
             © 2024 AERO & ASPHALT. Todos los derechos reservados.
           </p>
         </div>

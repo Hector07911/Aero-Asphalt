@@ -45,7 +45,7 @@ export default function BuildsHeader() {
           fontFamily: "'Share Tech Mono', monospace",
           fontSize: "10px",
           letterSpacing: "4px",
-          color: "#C8C8C8",
+          color: "#B8963E",
           textAlign: "center",
           marginBottom: "14px",
         }}
@@ -102,10 +102,10 @@ export default function BuildsHeader() {
               letterSpacing: "2px",
               padding: "8px 22px",
               border: categoriaActiva === c.id
-                ? "1px solid #9ca3af"
+                ? "1px solid #B8963E"
                 : "1px solid rgba(255,255,255,0.12)",
               background: categoriaActiva === c.id
-                ? "#9ca3af"
+                ? "#B8963E"
                 : "transparent",
               color: categoriaActiva === c.id
                 ? "#000"
@@ -115,8 +115,8 @@ export default function BuildsHeader() {
             }}
             onMouseEnter={(e) => {
               if (categoriaActiva !== c.id) {
-                e.currentTarget.style.borderColor = "#9ca3af";
-                e.currentTarget.style.color = "#9ca3af";
+                e.currentTarget.style.borderColor = "#B8963E";
+                e.currentTarget.style.color = "#B8963E";
               }
             }}
             onMouseLeave={(e) => {
@@ -161,21 +161,21 @@ export default function BuildsHeader() {
               letterSpacing: "2px",
               padding: "5px 14px",
               border: filtroActivo === f
-                ? "1px solid rgba(156,163,175,0.6)"
+                ? "1px solid rgba(184,150,62,0.6)"
                 : "1px solid rgba(255,255,255,0.07)",
               background: filtroActivo === f
-                ? "rgba(156,163,175,0.08)"
+                ? "rgba(184,150,62,0.08)"
                 : "transparent",
               color: filtroActivo === f
-                ? "#9ca3af"
+                ? "#B8963E"
                 : "rgba(255,255,255,0.3)",
               cursor: "pointer",
               transition: "all 0.2s",
             }}
             onMouseEnter={(e) => {
               if (filtroActivo !== f) {
-                e.currentTarget.style.borderColor = "rgba(156,163,175,0.6)";
-                e.currentTarget.style.color = "#9ca3af";
+                e.currentTarget.style.borderColor = "rgba(184,150,62,0.6)";
+                e.currentTarget.style.color = "#B8963E";
               }
             }}
             onMouseLeave={(e) => {
