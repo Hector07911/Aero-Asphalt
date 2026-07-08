@@ -17,8 +17,6 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-8 text-sm text-neutral-400">
             <a href="#" className="hover:text-[#B8963E] transition-colors">Instagram</a>
-            <a href="#" className="hover:text-[#B8963E] transition-colors">Twitter</a>
-            <a href="#" className="hover:text-[#B8963E] transition-colors">YouTube</a>
           </div>
 
           {/* Copyright */}

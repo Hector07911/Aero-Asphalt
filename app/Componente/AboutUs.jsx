@@ -10,12 +10,6 @@ export default function AboutUs() {
         <p className="text-white/50 text-base leading-relaxed mb-6">
          es un espacio dedicado a la cultura automotriz, donde cada automóvil es apreciado por la historia que representa, la ingeniería que lo hace posible, el diseño que lo convierte en una obra de arte y la pasión que despierta en quienes lo contemplan. No importa la marca, el año o el precio; lo que importa es la emoción que transmite. Cada auto cuenta una historia, y nosotros estamos aquí para contarla.
         </p>
-        <Link
-          href="/equipo"
-          className="text-[#B8963E] text-sm tracking-[2px] uppercase hover:text-[#B8963E]/80 transition-colors duration-300"
-        >
-          Conocé al equipo
-        </Link>
       </div>
     </section>
   );

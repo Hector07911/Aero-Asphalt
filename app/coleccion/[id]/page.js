@@ -5,6 +5,7 @@ import autos from '../../../data/autos.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import Footer from '../../Componente/Footer';
 
 function CarImage({ src, alt, className, fill, priority }) {
   const [imageError, setImageError] = useState(false);
@@ -235,6 +236,23 @@ export default function AutoDetalle() {
           </div>
         </div>
       )}
+
+      {/* Legacy Message */}
+      <section className="py-24 px-4 bg-[#0A0A0A]">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="text-[#808080] text-[clamp(0.75rem,1vw,0.9rem)] tracking-[0.3em] uppercase mb-6">
+            TRANSMITIR LEGADO
+          </div>
+          <p className="text-[#A0A0A0] text-[clamp(1rem,1.5vw,1.2rem)] font-light tracking-wide leading-relaxed mb-8">
+            Cada automóvil cuenta una historia. Cada historia merece ser preservada.
+          </p>
+          <div className="text-[#606060] text-[clamp(0.75rem,1vw,0.9rem)] tracking-[0.25em] uppercase">
+            PASIÓN • CULTURA • AUTOMOTRIZ
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
