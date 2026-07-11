@@ -13,7 +13,7 @@ export default function MarcaBMW() {
           <div className="lg:col-span-8">
             <div className="relative aspect-[16/9]">
               <Image 
-                src="/marcas/bmw-m4/img-principal.png" 
+                src="/marcas/bmw-m4/img-principal.webp" 
                 alt="BMW M4 G82" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 66vw"
@@ -39,7 +39,7 @@ export default function MarcaBMW() {
           <div className="lg:col-span-4 flex flex-col gap-4">
             <div className="relative aspect-[16/9]">
               <Image 
-                src="/marcas/bmw-m4/img-second.jpg" 
+                src="/marcas/bmw-m4/img-second.webp" 
                 alt="BMW M4 detalle" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
@@ -49,7 +49,7 @@ export default function MarcaBMW() {
             </div>
             <div className="relative aspect-[16/9]">
               <Image 
-                src="/marcas/bmw-m4/img-second-2.png" 
+                src="/marcas/bmw-m4/img-second-2.webp" 
                 alt="BMW M4 interior" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
@@ -59,7 +59,7 @@ export default function MarcaBMW() {
             </div>
             <div className="relative aspect-[16/9]">
               <Image 
-                src="/marcas/bmw-m4/img-second-3.png" 
+                src="/marcas/bmw-m4/img-second-3.webp" 
                 alt="BMW M4 motor" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"

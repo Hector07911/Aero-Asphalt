@@ -15,6 +15,7 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover md:hidden"
           priority
+          unoptimized
         />
         {/* GIF para desktop */}
         <Image 
@@ -24,6 +25,7 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover hidden md:block"
           priority
+          unoptimized
         />
       </div>
 

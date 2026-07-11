@@ -14,11 +14,6 @@ export default function Footer() {
             </h1>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-8 text-sm text-neutral-400">
-            <a href="#" className="hover:text-[#B8963E] transition-colors">Instagram</a>
-          </div>
-
           {/* Copyright */}
           <p className="text-white/50 text-sm">
             © 2024 AERO & ASPHALT. Todos los derechos reservados.

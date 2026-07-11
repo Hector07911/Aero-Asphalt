@@ -9,77 +9,66 @@ const BRANDS = {
   'bmw': {
     name: 'BMW',
     hero: {
-      image: '/marcas/bmw/hero.jpg',
-      video: '/marcas/bmw/hero.mp4',
-      subtitle: 'Desde hace décadas, BMW entiende que conducir es mucho más que desplazarse.',
+      image: '/marcas/bmw/hero2.jpg',
+      subtitle: 'Desde hace décadas, BMW transforma cada trayecto en una experiencia única.',
       statements: [
-        'Es precisión.',
-        'Es equilibrio.',
-        'Es pasión.'
+        'Precisión en cada curva.',
+        'Equilibrio entre potencia y confort.',
+        'La pasión por conducir.'
       ]
-    },
-    philosophy: {
-      text: 'Cada automóvil BMW nace con un objetivo. Conectar al conductor con la carretera mediante un equilibrio entre diseño, ingeniería y emoción.'
     },
     models: [
       {
         name: 'BMW M3 E30',
         year: '1986-1992',
-        description: 'El nacimiento de una leyenda.',
-        image: '/marcas/bmw/m3-e30.jpg'
+        description: 'Una leyenda del automovilismo nacida con el único fin de homologar el modelo para el campeonato de turismos DTM (Grupo A). Para competir, la FIA exigía fabricar un mínimo de 5,000 unidades de calle, pero BMW superó las expectativas produciendo casi 18,000 vehículos. Esta obra de arte de la ingeniería de la división BMW M detiene la báscula en solo 1,200 kg y destaca por una carrocería ensanchada con aerodinámica real, donde el pilar C y la luneta trasera fueron modificados exclusivamente para dirigir el flujo de aire hacia su icónico alerón trasero.<br/><br/>Bajo el capó late el legendario motor S14, un bloque atmosférico de cuatro cilindros y 2.3 litros con culata de 16 válvulas heredada del superdeportivo M1 y de la Fórmula 1, capaz de estirar por encima de las 7,000 rpm con una potencia inicial de 200 CV. Acoplado a una caja manual con primera hacia atrás (dog-leg) y tracción trasera, el M3 E30 se convirtió en el auto de turismo más exitoso de la historia, conquistando múltiples títulos en el DTM, el BTCC, las 24 Horas de Nürburgring y logrando una mítica victoria en el Rally de Córcega de 1987.<br/><br/>El mito se consolidó con evoluciones extremas de colección como el Evolution II (220 CV), la edición Cecotto (215 CV) y la máxima expresión del modelo, el Sport Evolution (2.5 litros y 238 CV), consolidándolo como el pilar fundacional de la deportividad pura y la conexión perfecta entre piloto, máquina y asfalto.',
+        image: '/marcas/bmw/m3-e30.webp'
       },
       {
-        name: 'BMW M5 E39',
-        year: '1998-2003',
-        description: 'La berlina deportiva que redefinió su segmento.',
-        image: '/marcas/bmw/m5-e39.jpg'
+        name: 'BMW M3 E46',
+        year: '2000-2006',
+        description: 'Representa la era dorada de la división BMW M y la cúspide de una filosofía purista inolvidable. Con 85,744 unidades vendidas, esta obra de arte atemporal diseñada por Joji Nagashima destaca por sus salpicaderas ensanchadas, cofre de aluminio con joroba y cuatro salidas de escape. Su ingeniería logró el equilibrio perfecto entre pureza mecánica y vanguardia, consagrando al legendario motor S54 atmosférico de 3.2 litros y seis cilindros en línea, el cual entrega 343 CV y ruge con un aullido metálico icónico hasta las 8,000 RPM.<br/><br/>Equipado con gestión de mariposas individuales y caja manual o automatizada SMG II, ofrece una dinámica impecable gracias a su reparto de pesos 50:50, chasis de alta rigidez y diferencial autoblocante M variable. El mito de esta generación se consolidó con versiones de colección sumamente cotizadas: el radical M3 CSL, aligerado en 110 kg con techo de fibra de carbono y potenciado a 360 CV (1,383 unidades); el Competition Package (ZCP) con mejoras dinámicas; y el ultra exclusivo M3 GTR, un unicornio homologado para calle con motor V8 de 4.0 litros y 380 CV (solo 10 unidades).<br/><br/>En definitiva, el E46 es el eslabón sagrado que unió magistralmente pasión, historia, ingeniería y diseño para definir el alto rendimiento de toda una generación.',
+        image: '/marcas/bmw/m3-e46.webp'
       },
       {
         name: 'BMW M4 G82',
         year: '2020-Presente',
-        description: 'La interpretación moderna de la precisión alemana.',
-        image: '/marcas/bmw-m4/img-principal.png'
+        description: 'Representa el cenit de la ingeniería digital y la audacia vanguardista de la división BMW M, redefiniendo el coupé de alto rendimiento para la era moderna. Diseñado con una estética polarizante y agresiva, destaca por su controvertida pero funcional parrilla de riñones verticales, esculpida para satisfacer las inmensas demandas de refrigeración de su planta motriz. Su construcción inteligente equilibra la masa mediante un techo de polímero reforzado con fibra de carbono (CFRP) y un chasis de rigidez torsional drásticamente incrementada.<br/><br/>En su núcleo late el soberbio motor S58 de 3.0 litros y seis cilindros en línea M TwinPower Turbo. Heredado de la competición, entrega 510 CV y 650 Nm de torque en sus versiones Competition, catapultándolo de 0 a 100 km/h en apenas 3.9 segundos (o 3.5 segundos con el sofisticado sistema de tracción integral M xDrive). Este bloque se gestiona mediante una transmisión M Steptronic de 8 velocidades y un sistema de frenado integrado ajustable.<br/><br/>El verdadero legado del G82 radica en su dualidad absoluta: es una lujosa cabina digitalizada con pantallas curvas para el confort diario que, mediante los botones rojos M del volante, se transforma de inmediato en un arma de precisión quirúrgica lista para pulverizar récords en los circuitos.',
+        image: '/marcas/bmw/m4-g82.webp'
       }
     ],
-    engineering: {
-      text: 'La ingeniería de BMW se basa en la búsqueda del equilibrio perfecto. Cada componente está diseñado para trabajar en armonía, creando una experiencia de conducción que conecta al piloto con la máquina.',
-      details: [
-        { title: 'Motor', image: '/marcas/bmw-m4/engine.png' },
-        { title: 'Faros', image: '/marcas/bmw-m4/lights.png' },
-        { title: 'Interior', image: '/marcas/bmw-m4/interior.png' },
-        { title: 'Volante', image: '/marcas/bmw-m4/steering.png' },
-        { title: 'Fibra de carbono', image: '/marcas/bmw-m4/carbon.png' },
-        { title: 'Llantas', image: '/marcas/bmw-m4/wheels.png' }
+engineering: {
+  text: 'La ingeniería de BMW se basa en la búsqueda del equilibrio perfecto. Cada componente está diseñado para trabajar en armonía, creando una experiencia de conducción que conecta al piloto con la máquina.  <br/> Bloque S58 de 6 cilindros en línea M TwinPower Turbo que entrega 510 hp y un torque de 650 Nm.',
+  details: [
+    { title: 'Motor', description: 'Bloque S58 de 6 cilindros en línea M TwinPower Turbo que entrega 510 hp y un torque de 650 Nm.', image: '/marcas/bmw/engine.webp' },
+    { title: 'Faros', description: 'Ópticas Full-LED adaptativas de alta intensidad con un diseño afilado y firmas lumínicas M específicas.', image: '/marcas/bmw/faros.webp' },
+    { title: 'Interior', description: 'Cabina deportiva con el sistema BMW Curved Display y acabados de lujo orientados al conductor.', image: '/marcas/bmw/m4-interior.webp' },
+    { title: 'Volante', description: 'Aro M de cuero con levas de cambio y los botones rojos M1/M2 para configuraciones dinámicas.', image: '/marcas/bmw/volante.webp' },
+    { title: 'Sistema de escape', description: 'Escape deportivo M con válvulas de mariposa controladas electrónicamente que optimiza el flujo y genera un sonido imponente.', image: '/marcas/bmw-m4/img-second-3.webp' },
+    { title: 'Llantas', description: 'Rines forjados de doble medida (19" adelante y 20" atrás) para maximizar la tracción y el agarre.', image: '/marcas/bmw/m4-g82.webp' }
+
       ]
     },
     articles: [
       {
         title: '¿Cómo nació la división M?',
         category: 'HISTORIA',
-        image: '/marcas/bmw-m4/article-1.png',
+        image: '/marcas/bmw/M.jpg',
         slug: 'division-m'
       },
       {
-        title: '¿Por qué el BMW M3 E30 cambió la historia?',
+        title: 'De un videojuego a la realidad: La leyenda del M3 GTR de NFS',
         category: 'LEYENDAS',
-        image: '/marcas/bmw-m4/article-2.png',
+        image: '/marcas/bmw/m3Gtr.jpg',
         slug: 'm3-e30'
       },
       {
         title: 'La evolución del seis cilindros en línea',
         category: 'INGENIERÍA',
-        image: '/marcas/bmw-m4/article-3.png',
+        image: '/marcas/bmw/motor6.jpg',
         slug: 'inline-6'
       }
     ],
-    gallery: [
-      '/marcas/bmw-m4/gallery-1.png',
-      '/marcas/bmw-m4/gallery-2.png',
-      '/marcas/bmw-m4/gallery-3.png',
-      '/marcas/bmw-m4/gallery-4.png',
-      '/marcas/bmw-m4/gallery-5.png',
-      '/marcas/bmw-m4/gallery-6.png'
-    ]
   },
 
   'rolls-royce': {
@@ -148,14 +137,6 @@ const BRANDS = {
         slug: 'spirit-of-ecstasy'
       }
     ],
-    gallery: [
-      '/marcas/rolls-royce/gallery-1.png',
-      '/marcas/rolls-royce/gallery-2.png',
-      '/marcas/rolls-royce/gallery-3.png',
-      '/marcas/rolls-royce/gallery-4.png',
-      '/marcas/rolls-royce/gallery-5.png',
-      '/marcas/rolls-royce/gallery-6.png'
-    ]
   },
 
   'porsche': {
@@ -224,14 +205,6 @@ const BRANDS = {
         slug: 'gt3-aero'
       }
     ],
-    gallery: [
-      '/marcas/porsche/gallery-1.jpg',
-      '/marcas/porsche/gallery-2.jpg',
-      '/marcas/porsche/gallery-3.jpg',
-      '/marcas/porsche/gallery-4.jpg',
-      '/marcas/porsche/gallery-5.jpg',
-      '/marcas/porsche/gallery-6.jpg'
-    ]
   },
   'ferrari': {
     name: 'Ferrari',
@@ -299,14 +272,6 @@ const BRANDS = {
         slug: 'enzo-legacy'
       }
     ],
-    gallery: [
-      '/marcas/ferrari/gallery-1.jpg',
-      '/marcas/ferrari/gallery-2.jpg',
-      '/marcas/ferrari/gallery-3.jpg',
-      '/marcas/ferrari/gallery-4.jpg',
-      '/marcas/ferrari/gallery-5.jpg',
-      '/marcas/ferrari/gallery-6.jpg'
-    ]
   },
   'pagani': {
     name: 'Pagani',
@@ -374,14 +339,6 @@ const BRANDS = {
         slug: 'zonda-history'
       }
     ],
-    gallery: [
-      '/marcas/pagani/gallery-1.jpg',
-      '/marcas/pagani/gallery-2.jpg',
-      '/marcas/pagani/gallery-3.jpg',
-      '/marcas/pagani/gallery-4.jpg',
-      '/marcas/pagani/gallery-5.jpg',
-      '/marcas/pagani/gallery-6.jpg'
-    ]
   },
   'mclaren': {
     name: 'McLaren',
@@ -449,14 +406,6 @@ const BRANDS = {
         slug: 'p1-evolution'
       }
     ],
-    gallery: [
-      '/marcas/mclaren/gallery-1.jpg',
-      '/marcas/mclaren/gallery-2.jpg',
-      '/marcas/mclaren/gallery-3.jpg',
-      '/marcas/mclaren/gallery-4.jpg',
-      '/marcas/mclaren/gallery-5.jpg',
-      '/marcas/mclaren/gallery-6.jpg'
-    ]
   },
   'lamborghini': {
     name: 'Lamborghini',
@@ -524,14 +473,6 @@ const BRANDS = {
         slug: 'gandini-legacy'
       }
     ],
-    gallery: [
-      '/marcas/lamborghini/gallery-1.jpg',
-      '/marcas/lamborghini/gallery-2.jpg',
-      '/marcas/lamborghini/gallery-3.jpg',
-      '/marcas/lamborghini/gallery-4.jpg',
-      '/marcas/lamborghini/gallery-5.jpg',
-      '/marcas/lamborghini/gallery-6.jpg'
-    ]
   },
   'audi': {
     name: 'Audi',
@@ -599,14 +540,6 @@ const BRANDS = {
         slug: 'audi-lighting'
       }
     ],
-    gallery: [
-      '/marcas/audi/gallery-1.jpg',
-      '/marcas/audi/gallery-2.jpg',
-      '/marcas/audi/gallery-3.jpg',
-      '/marcas/audi/gallery-4.jpg',
-      '/marcas/audi/gallery-5.jpg',
-      '/marcas/audi/gallery-6.jpg'
-    ]
   },
   'aston-martin': {
     name: 'Aston Martin',
@@ -674,14 +607,6 @@ const BRANDS = {
         slug: 'valkyrie-f1'
       }
     ],
-    gallery: [
-      '/marcas/aston-martin/gallery-1.jpg',
-      '/marcas/aston-martin/gallery-2.jpg',
-      '/marcas/aston-martin/gallery-3.jpg',
-      '/marcas/aston-martin/gallery-4.jpg',
-      '/marcas/aston-martin/gallery-5.jpg',
-      '/marcas/aston-martin/gallery-6.jpg'
-    ]
   },
   'mazda': {
     name: 'Mazda',
@@ -748,14 +673,6 @@ const BRANDS = {
         image: '/marcas/mazda/article-3.jpg',
         slug: 'mx5-history'
       }
-    ],
-    gallery: [
-      '/marcas/mazda/gallery-1.jpg',
-      '/marcas/mazda/gallery-2.jpg',
-      '/marcas/mazda/gallery-3.jpg',
-      '/marcas/mazda/gallery-4.jpg',
-      '/marcas/mazda/gallery-5.jpg',
-      '/marcas/mazda/gallery-6.jpg'
     ]
   },
   'nissan': {
@@ -824,14 +741,6 @@ const BRANDS = {
         slug: 'nismo-legacy'
       }
     ],
-    gallery: [
-      '/marcas/nissan/gallery-1.jpg',
-      '/marcas/nissan/gallery-2.jpg',
-      '/marcas/nissan/gallery-3.jpg',
-      '/marcas/nissan/gallery-4.jpg',
-      '/marcas/nissan/gallery-5.jpg',
-      '/marcas/nissan/gallery-6.jpg'
-    ]
   }
 };
 
@@ -877,6 +786,7 @@ export default function MarcaDetail() {
               sizes="100vw"
               className="object-cover"
               priority
+              unoptimized
             />
           )}
           <div className="absolute inset-0 bg-black/60" />
@@ -902,20 +812,6 @@ export default function MarcaDetail() {
               </p>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* FILOSOFÍA */}
-      <section className="py-32 px-4 md:px-12 lg:px-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-[#B8963E] text-sm tracking-[6px] uppercase font-mono mb-4">// FILOSOFÍA</h2>
-            <div className="w-16 h-px bg-[#B8963E]" />
-          </div>
-          
-          <p className="text-white text-[clamp(18px,2.5vw,24px)] font-light leading-relaxed tracking-wide">
-            {brand.philosophy.text}
-          </p>
         </div>
       </section>
 
@@ -948,9 +844,10 @@ export default function MarcaDetail() {
                   <p className="text-[#B8963E] text-lg tracking-widest uppercase mb-6">
                     {model.year}
                   </p>
-                  <p className="text-[#A0A0A0] text-lg font-light tracking-wide">
-                    {model.description}
-                  </p>
+                  <div 
+                    className="text-[#A0A0A0] text-lg font-light tracking-wide space-y-4"
+                    dangerouslySetInnerHTML={{ __html: model.description }}
+                  />
                 </div>
               </div>
             ))}
@@ -973,21 +870,26 @@ export default function MarcaDetail() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {brand.engineering.details.map((detail, index) => (
-                <div key={index} className="relative aspect-square overflow-hidden group">
+                <div key={index} className="relative aspect-[4/3] overflow-hidden group">
                   <Image
                     src={detail.image}
                     alt={detail.title}
                     fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-700 ease-out flex items-center justify-center">
-                    <span className="text-white text-sm tracking-widest uppercase font-mono transition-colors duration-500 ease-out group-hover:text-[#B8963E]">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:bg-black/70 transition-colors duration-700 ease-out flex flex-col justify-end p-6">
+                    <h3 className="text-white text-lg font-bold tracking-widest uppercase mb-2 transition-colors duration-500 ease-out group-hover:text-[#B8963E]">
                       {detail.title}
-                    </span>
+                    </h3>
+                    {detail.description && (
+                      <p className="text-neutral-300 text-sm font-light leading-relaxed">
+                        {detail.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -1031,50 +933,14 @@ export default function MarcaDetail() {
                 </div>
               </Link>
             ))}
+
+            <Link href="/marcas" className="text-[#B8963E] text-lg tracking-widest uppercase hover:text-[#B8963E]/80 transition-colors">
+              Explorar otra marca →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* GALERÍA EDITORIAL */}
-      <section className="py-32 px-4 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-[#B8963E] text-sm tracking-[6px] uppercase font-mono mb-4">// GALERÍA</h2>
-            <div className="w-16 h-px bg-[#B8963E]" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {brand.gallery.map((image, index) => (
-              <div 
-                key={index} 
-                className={`relative overflow-hidden group ${index === 0 ? 'md:col-span-2 lg:col-span-2 aspect-[2/1]' : 'aspect-[4/5]'}`}
-              >
-                <Image
-                  src={image}
-                  alt={`${brand.name} gallery ${index + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CIERRE */}
-      <section className="py-32 px-4 md:px-12 lg:px-20 bg-[#050505]">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-white text-[clamp(24px,4vw,32px)] font-light tracking-wide mb-12 italic">
-            "Cada marca tiene una historia. Cada historia comenzó con una pasión."
-          </p>
-
-          <Link href="/marcas" className="text-[#B8963E] text-lg tracking-widest uppercase hover:text-[#B8963E]/80 transition-colors">
-            Explorar otra marca →
-          </Link>
-        </div>
-      </section>
 
       {/* Legacy Message */}
       <section className="py-24 px-4 bg-[#0A0A0A]">
@@ -1090,7 +956,6 @@ export default function MarcaDetail() {
           </div>
         </div>
       </section>
-
       <Footer />
 
     </div>
