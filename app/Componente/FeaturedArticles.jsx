@@ -24,7 +24,7 @@ export default function FeaturedArticles() {
           <div className="border border-white/10 bg-[#0e0e0e] overflow-hidden">
             <div className="relative bg-[#1a1a1a] h-48">
               <Image 
-                src="/v12.jpg" 
+                src="/v12.webp" 
                 alt="Motor v12" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
@@ -49,7 +49,7 @@ export default function FeaturedArticles() {
           <div className="border border-white/10 bg-[#0e0e0e] overflow-hidden">
             <div className="relative bg-[#1a1a1a] h-48">
               <Image 
-                src="/porsche911.jpg" 
+                src="/porsche911.webp" 
                 alt="Porsche 911" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
@@ -74,7 +74,7 @@ export default function FeaturedArticles() {
           <div className="border border-white/10 bg-[#0e0e0e] overflow-hidden">
             <div className="relative bg-[#1a1a1a] h-48">
               <Image 
-                src="/arte.jpg" 
+                src="/arte.webp" 
                 alt="Arte" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"

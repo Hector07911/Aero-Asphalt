@@ -6,7 +6,7 @@ export default function FinalImage() {
   return (
     <section className="w-full bg-black relative aspect-[21/9]">
       <Image 
-        src="/img-final.png" 
+        src="/img-final.webp" 
         alt="Final image" 
         fill
         sizes="100vw"
