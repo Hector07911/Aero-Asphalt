@@ -21,3 +21,74 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* ─────────────────────────────────────────────
+   HERO — reveal cinemático estilo GTA VI
+───────────────────────────────────────────── */
+@keyframes heroZoom {
+  0% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+.animate-hero-zoom {
+  animation: heroZoom 3.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroTitleReveal {
+  0% {
+    transform: translateY(110%) scale(0.85);
+    opacity: 0;
+    letter-spacing: 0.15em;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    letter-spacing: -0.02em;
+  }
+}
+.animate-hero-title {
+  animation: heroTitleReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animate-hero-subtitle {
+  animation: fadeUp 1s ease-out 1s both;
+}
+.animate-hero-statements {
+  animation: fadeUp 1s ease-out 1.3s both;
+}
+
+@keyframes scrollHint {
+  0%, 100% { opacity: 0.2; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+.animate-scroll-hint {
+  animation: scrollHint 2s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   MODELOS — reveal al hacer scroll (ModelFeature)
+───────────────────────────────────────────── */
+.reveal-scale {
+  opacity: 0;
+  transform: translateY(48px) scale(0.98);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-fade-x {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal-fade-x.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
