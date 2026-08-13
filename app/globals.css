@@ -92,3 +92,14 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* ─────────────────────────────────────────────
+   SCROLLBAR HIDE — para horizontal scroll elegante
+───────────────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
