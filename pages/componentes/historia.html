@@ -11,14 +11,21 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li class="logo"><a href="../../index.html">AERO <span class="gold-accent">&</span> ASPHALT</a></li>
-        <li><a href="../../index.html">Inicio</a></li>
-        <li><a href="marcas.html">Marcas</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li class="registrar"><a href="#"><img src="../../assets/img/user.svg"></a></li>
-      </ul>
+      <div class="nav-container">
+        <a href="../../index.html" class="logo">AERO <span class="gold-accent">&</span> ASPHALT</a>
+        <button class="menu-toggle" id="hamburger-btn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="marcas.html">Marcas</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li class="registrar"><a href="#"><img src="../../assets/img/user.svg" alt="Usuario"></a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -335,6 +342,6 @@
 
   <script src="../../js/historia.js"></script>
   <script src="../../js/carousel.js"></script>
-  <script src="../../menu-hamburger.js"></script>
+  <script src="../../js/menu-hamburger.js"></script>
 </body>
 </html>
