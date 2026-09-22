@@ -1,0 +1,139 @@
+/* Laptops y Tablets Grandes (Menos de 1024px) */
+@media (max-width: 1024px) {
+    .carousel-text h2 {
+        font-size: 42px;
+    }
+    .carousel-text p {
+        font-size: 18px;
+    }
+}
+
+/* Tablets Medianas/Verticales (Menos de 768px) */
+@media (max-width: 768px) {
+    .carousel-container {
+        aspect-ratio: 4 / 3; /* Proporción más cuadrada para pantallas verticales */
+        min-height: 350px;
+    }
+    .carousel-text {
+        left: 5%;
+        max-width: 90%;
+    }
+    .carousel-text h2 {
+        font-size: 32px;
+    }
+}
+
+/* Teléfonos Inteligentes (Menos de 480px) */
+@media (max-width: 480px) {
+    .carousel-container {
+        min-height: 300px; /* Mantiene un tamaño decente en móviles pequeños */
+    }
+    .carousel-text h2 {
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+    .carousel-text p {
+        font-size: 15px;
+    }
+    .carousel-small-text {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    .carousel-indicators {
+        bottom: 12px; /* Sube un poco para no estorbar */
+    }
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* --- CARRUSEL MÓVIL --- */
+.mobile-carousel {
+  position: relative;
+  display: block; /* Por defecto se muestra en móvil */
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-out;
+  width: 100%;
+}
+
+.mobile-carousel .article-card {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn { left: 0.5rem; }
+.next-btn { right: 0.5rem; }
+
+/* Puntos indicadores */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: var(--color-accent);
+}
+
+
+/* --- GRID DESKTOP --- */
+.desktop-grid {
+  display: none; /* Oculto por defecto en móvil */
+}
+
+/* Media Query para pantallas medianas en adelante (md: 768px) */
+@media (min-width: 768px) {
+  .mobile-carousel {
+    display: none; /* Ocultamos el carrusel en desktop */
+  }
+
+  .desktop-grid {
+    display: grid; /* Mostramos el grid en desktop */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}

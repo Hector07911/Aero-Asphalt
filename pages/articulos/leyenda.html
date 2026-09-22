@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/stilos.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <title>Leyenda - Aero & Asphalt</title>
+    <style>
+        .article-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--color-primary) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 24px 48px 24px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content { padding: 0 48px 48px 48px; }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content { padding: 0 80px 48px 80px; }
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .meta-divider {
+            width: 1px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .meta-text {
+            font-family: monospace;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--color-white);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            color: var(--color-gray);
+            font-size: 1.125rem;
+            font-weight: 300;
+            max-width: 800px;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        @media (min-width: 768px) {
+            .article-content { padding: 80px 48px; }
+        }
+
+        @media (min-width: 1024px) {
+            .article-content { padding: 80px 80px; }
+        }
+
+        .article-content p {
+            color: var(--color-gray);
+            font-size: 1.125rem;
+            line-height: 1.85;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .article-content h2 {
+            color: var(--color-gold);
+            font-size: 1.75rem;
+            margin: 48px 0 16px 0;
+            font-weight: 600;
+        }
+
+        .article-content img {
+            width: 100%;
+            height: auto;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .article-content .image-caption {
+            color: var(--color-gray);
+            font-size: 0.875rem;
+            margin-top: 12px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .article-content .list-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--color-gold);
+        }
+
+        .article-content .list-item h4 {
+            color: var(--color-white);
+            margin-bottom: 8px;
+            font-size: 1.125rem;
+        }
+
+        .article-content .list-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .article-navigation {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-gold);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="../../index.html">AERO <span class="gold-accent">&</span> ASPHALT</a></li>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../componentes/marcas.html">Marcas</a></li>
+                <li><a href="../componentes/historia.html">Historia</a></li>
+                <li><a href="../componentes/nosotros.html">Nosotros</a></li>
+                <li class="registrar"><a href="#"><img src="../../assets/img/user.svg"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../assets/img/secion-articulos/arte.webp" alt="Leyenda">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-meta">
+                    <span class="meta-text">// CULTURA</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-text">10 MIN LECTURA</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-text">2024</span>
+                </div>
+                <h1 class="hero-title">Leyenda</h1>
+                <p class="hero-subtitle">Qué hace que un automóvil se convierta en leyenda</p>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <h2>¿Por qué algunas máquinas tienen alma mientras otras solo tienen números?</h2>
+            <p>Millones de automóviles han sido fabricados desde el nacimiento de la industria. Pero solo unos pocos han trascendido su tiempo y las frías hojas de especificaciones para convertirse en verdaderas leyendas, transformándose en el equilibrio perfecto entre diseño de vanguardia e ingeniería extrema.</p>
+            <p>¿Qué separa a un automóvil ordinario de uno que entra en la historia y redefine nuestra cultura? La respuesta no está en su precio ni en una marca rimbombante, sino en su capacidad para combinar el uso diario con un rendimiento extraordinario en circuito, convirtiéndose en una extensión del piloto.</p>
+            <p>Las curvas favorecen la aerodinámica pasiva y activa mediante soluciones visuales que desafían la física: aberturas profundas en el capó, ensanchamientos milimétricos en las aletas para albergar vías más anchas y rejillas de ventilación que alivian la presión extrema atrapada en las ruedas, pegando el coche al asfalto en curvas rápidas sin alterar su mítica silueta original.</p>
+            <img src="../../assets/img/secion-articulos/porsche-901.webp" alt="Evolucionar sin olvidar el origen">
+            <p class="image-caption">El Porsche 911 — Un legado que sigue evolucionando su ingeniería sin perder su icónica personalidad</p>
+
+            <h2>La conexión emocional y el arte invisible</h2>
+            <p>Un automóvil se convierte en leyenda cuando logra crear una conexión emocional profunda con quienes lo conducen o simplemente lo admiran. Deja de ser metal para volverse una escultura viva que canaliza flujos de viento invisibles por debajo de su chasis plano, ocultando una brutalidad técnica masiva bajo formas hermosas y elegantes.</p>
+            
+            <div class="list-item">
+                <h4>Porsche 911 (992 GT3 RS)</h4>
+                <p>Lleva la aerodinámica de circuitos a la calle con su masivo alerón de cuello de cisne y mandos analógicos en el volante para alterar la suspensión en tiempo real.</p>
+            </div>
+            <div class="list-item">
+                <h4>Ferrari SF90 / F40</h4>
+                <p>Transformaron la necesidad radical de refrigeración en tomas de aire dramáticas que redefinieron para siempre la estética del superdeportivo moderno.</p>
+            </div>
+            <div class="list-item">
+                <h4>McLaren W1 / F1</h4>
+                <p>Obras maestras de la física de fluidos que utilizan el efecto suelo para succionar de forma invisible el vehículo al suelo a velocidades absurdas.</p>
+            </div>
+
+            <h2>El factor humano y la obsesión técnica</h2>
+            <p>Detrás de cada automóvil legendario hay personas. Ingenieros visionarios, diseñadores talentosos y mentes obsesionadas que arriesgan reputaciones enteras para defender conceptos puros, como mantener un motor atmosférico que grita con furia a 9,000 revoluciones por minuto.</p>
+            <p>Esas personas inyectan su pasión en cada componente, cada decisión y cada milímetro de fibra de carbono. Esa energía humana es lo que finalmente da vida a la máquina, logrando que los cambios de apoyo en zonas viradas sean instantáneos y ericen la piel de quien lo escucha pasar.</p>
+
+            <h2>El tiempo como juez de la emoción</h2>
+            <p>El tiempo es el juez final. Los automóviles que se convierten en leyendas son aquellos que siguen siendo relevantes, admirados y deseados décadas después de su creación, porque no medimos su valor en caballos de fuerza, sino en las pulsaciones del corazón de quienes los contemplan.</p>
+            <p>En este espacio entendemos que cada automóvil es un contenedor de historias y un monumento a la emoción pura. No importa la marca, el año o el valor; lo único real es la conexión visceral y el arte en movimiento diseñado para ser recordado por generaciones.</p>
+        </article>
+
+        <!-- Navigation -->
+        <div class="article-navigation">
+            <a href="porsche.html" class="nav-link">← Anterior: La Silueta Perfecta</a>
+            <a href="../../index.html" class="nav-link">Volver al inicio →</a>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="gold-line"></div>
+            <div class="footer-content">
+                <p class="footer-brand">AERO <span class="gold-accent">&</span> ASPHALT</p>
+                <p class="footer-text">Diseño, ingeniería y pasión reunidos en un mismo lugar.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aero & Asphalt. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/carousel.js"></script>
+</body>
+</html>

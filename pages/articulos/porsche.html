@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/stilos.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <title>La Silueta Perfecta - Aero & Asphalt</title>
+    <style>
+        .article-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--color-primary) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 24px 48px 24px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content { padding: 0 48px 48px 48px; }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content { padding: 0 80px 48px 80px; }
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .meta-divider {
+            width: 1px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .meta-text {
+            font-family: monospace;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--color-white);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            color: var(--color-gray);
+            font-size: 1.125rem;
+            font-weight: 300;
+            max-width: 800px;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        @media (min-width: 768px) {
+            .article-content { padding: 80px 48px; }
+        }
+
+        @media (min-width: 1024px) {
+            .article-content { padding: 80px 80px; }
+        }
+
+        .article-content p {
+            color: var(--color-gray);
+            font-size: 1.125rem;
+            line-height: 1.85;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .article-content h2 {
+            color: var(--color-gold);
+            font-size: 1.75rem;
+            margin: 48px 0 16px 0;
+            font-weight: 600;
+        }
+
+        .article-content h3 {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            margin: 40px 0 16px 0;
+            font-weight: 600;
+        }
+
+        .article-content img {
+            width: 100%;
+            height: auto;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .article-content .image-caption {
+            color: var(--color-gray);
+            font-size: 0.875rem;
+            margin-top: 12px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .article-content .list-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--color-gold);
+        }
+
+        .article-content .list-item h4 {
+            color: var(--color-white);
+            margin-bottom: 8px;
+            font-size: 1.125rem;
+        }
+
+        .article-content .list-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .article-navigation {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-gold);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="../../index.html">AERO <span class="gold-accent">&</span> ASPHALT</a></li>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../componentes/marcas.html">Marcas</a></li>
+                <li><a href="../componentes/historia.html">Historia</a></li>
+                <li><a href="../componentes/nosotros.html">Nosotros</a></li>
+                <li class="registrar"><a href="#"><img src="../../assets/img/user.svg"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../assets/img/secion-articulos/porsche911.webp" alt="La Silueta Perfecta">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-meta">
+                    <span class="meta-text">// DISEÑO</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-text">6 MIN LECTURA</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-text">2024</span>
+                </div>
+                <h1 class="hero-title">La Silueta Perfecta</h1>
+                <p class="hero-subtitle">¿Cómo el Porsche 911 ha mantenido su esencia durante más de 60 años?</p>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <p>Hay diseños que envejecen con el tiempo. Y hay otros que parecen desafiar las leyes de la moda.</p>
+            <p>El Porsche 911 es uno de ellos.</p>
+            <p>Desde su presentación en 1963, ha evolucionado generación tras generación sin perder aquello que lo hace inconfundible. Basta una simple silueta para reconocerlo, incluso antes de ver su emblema.</p>
+            <p>Pocas máquinas pueden presumir de haber cambiado tanto sin dejar de ser ellas mismas.</p>
+
+            <h2>El origen de una leyenda</h2>
+            <img src="../../assets/img/secion-articulos/primerPorsche911.webp" alt="Porsche 911 original">
+            <p class="image-caption">El 911 original de 1963 — Una silueta que definiría una era</p>
+            <p>El 911 nació como el sucesor del 356, pero Ferry Porsche quería algo más que un simple reemplazo. Quería crear un deportivo que pudiera competir con los mejores de su época sin perder la esencia de la marca.</p>
+            <p>El resultado fue un diseño revolucionario: motor trasero, perfil bajo, faros redondos y esa característica línea de techo que se inclina hacia la parte trasera.</p>
+
+            <h2>Mientras otros deportivos cambiaban radicalmente con cada nueva generación, Porsche tomó una decisión diferente.</h2>
+            <p>En lugar de reinventarlo, decidió perfeccionarlo.</p>
+            <p>Cada nueva versión incorporó avances tecnológicos, mejoras aerodinámicas y motores más eficientes, pero siempre respetando las proporciones que hicieron del 911 un icono.</p>
+            
+            <div class="list-item">
+                <h4>Proporciones perfectas</h4>
+                <p>Su techo con caída suave, los guardabarros delanteros elevados, los faros redondos y su característica zaga forman una identidad visual que ha sobrevivido a generaciones enteras.</p>
+            </div>
+            <div class="list-item">
+                <h4>ADN inquebrantable</h4>
+                <p>No importa si observamos un modelo clásico de los años sesenta o un moderno GT3 RS. Ambos comparten el mismo ADN.</p>
+            </div>
+            <div class="list-item">
+                <h4>Reconocibilidad instantánea</h4>
+                <p>Desde cualquier ángulo, un 911 es inconfundible. Esa identidad visual es parte de su valor atemporal.</p>
+            </div>
+
+            <h2>Ingeniería Esculpida por el Viento</h2>
+            <p>El Porsche 911 ha evolucionado demostrando que un coche rápido nace de la armonía perfecta entre diseño e ingeniería. Su silueta icónica de gota de agua no se ha perdido; se ha ensanchado milimétricamente para albergar neumáticos de mayor sección y vías más anchas, otorgándole un agarre lateral masivo en las curvas.</p>
+            <p>Su capacidad para combinar el uso diario con un rendimiento extraordinario en circuito lo ha convertido en uno de los deportivos más completos jamás construidos.</p>
+            <p>Las curvas favorecen la aerodinámica mediante soluciones visuales funcionales: aberturas en el capó y rejillas de ventilación sobre las aletas delanteras que alivian la presión del aire atrapado en las ruedas, reduciendo la fuerza de elevación del morro.</p>
+            <img src="../../assets/img/secion-articulos/PorscheGT3.webp" alt="Evolucionar sin olvidar el origen">
+            <p class="image-caption">El Porsche 911 — Un legado que sigue evolucionando sin perder su personalidad</p>
+            <p>El protagonismo final se lo lleva su alerón trasero activo de cuello de cisne y el fondo plano del chasis. Juntos, canalizan el viento para empujar el coche contra el asfalto en los circuitos, transformando la resistencia del aire en pura estabilidad sin romper la mítica línea del techo nacida en 1963.</p>
+
+            <h3>Optimización de Pista e Integración de Materiales</h3>
+            <p>Bajo esa carrocería ensanchada se esconde un chasis de competición controlable desde el puesto de conducción. El volante integra selectores giratorios analógicos que permiten al piloto ajustar la amortiguación en extensión y compresión, el diferencial trasero y el control de tracción en tiempo real, adaptando el coche a cada curva del circuito.</p>
+            <p>Esta precisión técnica se complementa con una estricta filosofía de construcción ligera. El uso masivo de plástico reforzado con fibra de carbono (CFRP) en las puertas, las aletas delanteras y el techo reduce el peso total y baja el centro de gravedad, asegurando que los cambios de apoyo en zonas viradas sean instantáneos y milimétricos.</p>
+        </article>
+
+        <!-- Navigation -->
+        <div class="article-navigation">
+            <a href="v12.html" class="nav-link">← Anterior: El Renacer del V12</a>
+            <a href="leyenda.html" class="nav-link">Siguiente: Leyenda →</a>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="gold-line"></div>
+            <div class="footer-content">
+                <p class="footer-brand">AERO <span class="gold-accent">&</span> ASPHALT</p>
+                <p class="footer-text">Diseño, ingeniería y pasión reunidos en un mismo lugar.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aero & Asphalt. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/carousel.js"></script>
+</body>
+</html>

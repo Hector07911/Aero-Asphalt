@@ -1,0 +1,816 @@
+/* Variables de color - Paleta Borgoña/Rojo Oscuro para autos de lujo */
+:root {
+    --color-primary: #0a0a0a;      
+    --color-secondary: #ededed;   
+    --color-accent: #B8963E;      
+    --color-accent-light: #C8C8C8; 
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-accent-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Navbar moderno y minimalista */
+header {
+    background-color: var(--color-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(184, 150, 62, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+}
+
+ul li {
+    float: none;
+}
+
+ul li a {
+    display: block;
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    position: relative;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: var(--color-accent);
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+ul li a:hover::after {
+    width: 60%;
+}
+
+
+ul li.logo a {
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-size: 24px;
+    padding: 12px 24px;
+}
+
+ul li.logo a:hover {
+    color: var(--color-accent);
+}
+
+ul li.logo a::after {
+    display: none;
+}
+
+ul li.registrar a {
+    padding: 8px 12px;
+}
+
+ul li.registrar img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Carrusel */
+
+.carousel {
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Degradado inferior hacia la siguiente sección */
+.carousel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    z-index: 5;
+    pointer-events: none;
+    /* cambia #0a0a0a por el fondo real de la sección que sigue */
+    background: linear-gradient(to bottom, transparent, var(--color-bg, #0a0a0a));
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 400px;
+    max-height: 650px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 0s;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(.9) contrast(1.08);
+}
+
+/* Degradado lateral: solo en el slide con texto */
+.carousel-slide.with-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, .88) 0%,
+        rgba(0, 0, 0, .6) 40%,
+        rgba(0, 0, 0, 0) 75%
+    );
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 10;
+    max-width: 550px;
+    padding-right: 20px;
+}
+
+.carousel-text h5 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 14px 0;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--color-accent);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+.carousel-text h5::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: var(--color-accent);
+}
+
+.carousel-text h2 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 16px 0;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
+.carousel-text p {
+    font-size: 20px;
+    margin: 0;
+    color: #e5e5e5;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Botón */
+.hero-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background: var(--color-accent);
+    color: #000;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.hero-button:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+.hero-button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator.active {
+    background-color: var(--color-accent);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .carousel-text { left: 6%; }
+    .carousel-text h2 { font-size: 34px; }
+    .carousel-text p { font-size: 16px; }
+}
+
+/* Estilos Generales / Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Sección Superior (Frase y Divisor) */
+.luxury-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 144px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gold-line {
+  width: 64px;
+  height: 1px;
+  background-color: #B8963E;
+}
+
+.top-line {
+  margin-bottom: 32px;
+}
+
+.bottom-line {
+  margin-top: 40px;
+}
+
+.main-quote {
+  color: #e5e5e5;
+  font-size: 3rem;
+  font-style: italic;
+  max-width: 672px;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+  font-family: 'Playfair Display', serif;
+}
+
+.diamond-divider {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.line-side {
+  width: 32px;
+  height: 1px;
+  background-color: #262626;
+}
+
+.gold-diamond {
+  width: 6px;
+  height: 6px;
+  background-color: #B8963E;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.eyebrow-text {
+  color: #737373;
+  font-size: 11px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+/* BMW Section */
+.bmw-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 32px 80px 64px 80px;
+}
+
+.bmw-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+
+.bmw-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+/* Columna Principal (8 columnas) */
+.main-content-col {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.image-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 32px;
+}
+
+.car-subtitle {
+  color: #B8963E;
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.car-title {
+  color: #ffffff;
+  font-size: 3.75rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  margin-bottom: 16px;
+}
+
+.car-description {
+  color: #d4d4d4;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Datos Técnicos */
+.tech-specs {
+  padding: 32px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.spec-item {
+  text-align: center;
+}
+
+.spec-label {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+}
+
+.spec-value {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.spec-sub {
+  color: #737373;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* Imágenes Secundarias (4 columnas) */
+.secondary-images-col {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.secondary-image-wrapper {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 160px;
+}
+
+.secondary-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección Hero */
+.hero-containers {
+  width: 100%;
+  background-color: #000000;
+  padding: 96px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 896px;
+  text-align: center;
+}
+
+/* Líneas decorativas doradas */
+.gold-line {
+  width: 96px;
+  height: 1px;
+  background-color: #B8963E;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-line {
+  margin-bottom: 32px;
+}
+
+.bottom-line {
+  margin-bottom: 48px;
+}
+
+/* Tipografías y Textos */
+.container-title {
+  color: #ffffff;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.gold-accent {
+  color: #B8963E;
+}
+
+.container-subtitle {
+  color: #B8963E;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+.container-text-primary {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 32px;
+}
+
+.container-text-secondary {
+  color: #C8C8C8;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+.history-text {
+  margin-bottom: 0;
+}
+
+/* Botón */
+.hero-button {
+  display: inline-block;
+  border: 1px solid #B8963E;
+  color: #B8963E;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-bottom: 48px;
+}
+
+.hero-button:hover {
+  background-color: #B8963E;
+  color: #000000;
+}
+
+/* Sección de imagen final */
+.final-image-section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.final-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.final-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(
+        to top,
+        var(--color-primary) 0%,
+        rgba(10, 10, 10, 0.7) 30%,
+        rgba(10, 10, 10, 0.3) 60%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+/* Sección Quienes Somos */
+.about-section {
+    background-color: var(--color-primary);
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title {
+    color: var(--color-secondary);
+    font-size: 36px;
+    margin: 24px 0;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 2px;
+}
+
+.about-text {
+    color: var(--color-accent-light);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 32px auto;
+    font-weight: 300;
+}
+
+/* Estilos específicos para centrar elementos en about-section */
+.about-section .gold-line {
+    margin: 0 auto;
+}
+
+.about-section .diamond-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+/* Responsive para imagen final y sección about */
+@media (max-width: 768px) {
+    .final-image-container {
+        max-width: 100%;
+    }
+
+    .about-section {
+        padding: 60px 16px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Visor de Artículos */
+.article-viewer {
+  display: none;
+  width: 100%;
+  background-color: var(--color-primary);
+}
+
+.article-viewer.active {
+  display: block;
+}
+
+.article-viewer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.back-to-articles {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-to-articles:hover {
+  color: var(--color-gold);
+}
+
+#article-display {
+  color: var(--color-secondary);
+}
+
+#article-display h1 {
+  color: var(--color-gold);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+#article-display .article-meta {
+  color: var(--color-gray);
+  font-size: 14px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#article-display h2 {
+  color: var(--color-gold);
+  font-size: 28px;
+  margin: 30px 0 15px 0;
+}
+
+#article-display p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+#article-display p.highlight {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+#article-display img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+#article-display .article-image-caption {
+  color: var(--color-gray);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#article-display .list-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--color-gold);
+}
+
+#article-display .list-item h4 {
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+#article-display .list-item p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 12px;
+    }
+
+    .about-title {
+        font-size: 24px;
+    }
+
+    .about-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .final-gradient {
+        height: 150px;
+    }
+}

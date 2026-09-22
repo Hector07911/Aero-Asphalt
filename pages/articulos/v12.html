@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/stilos.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <title>El Renacer del V12 - Aero & Asphalt</title>
+    <style>
+        .article-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--color-primary) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 24px 48px 24px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content { padding: 0 48px 48px 48px; }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content { padding: 0 80px 48px 80px; }
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .meta-divider {
+            width: 1px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .meta-text {
+            font-family: monospace;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--color-white);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            color: var(--color-gray);
+            font-size: 1.125rem;
+            font-weight: 300;
+            max-width: 800px;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        @media (min-width: 768px) {
+            .article-content { padding: 80px 48px; }
+        }
+
+        @media (min-width: 1024px) {
+            .article-content { padding: 80px 80px; }
+        }
+
+        .article-content p {
+            color: var(--color-gray);
+            font-size: 1.125rem;
+            line-height: 1.85;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .article-content h2 {
+            color: var(--color-gold);
+            font-size: 1.75rem;
+            margin: 48px 0 16px 0;
+            font-weight: 600;
+        }
+
+        .article-content img {
+            width: 100%;
+            height: auto;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .article-content .image-caption {
+            color: var(--color-gray);
+            font-size: 0.875rem;
+            margin-top: 12px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .article-content .list-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--color-gold);
+        }
+
+        .article-content .list-item h4 {
+            color: var(--color-white);
+            margin-bottom: 8px;
+            font-size: 1.125rem;
+        }
+
+        .article-content .list-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .article-highlight {
+            color: var(--color-gold);
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+
+        .article-navigation {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-gold);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="../../index.html">AERO <span class="gold-accent">&</span> ASPHALT</a></li>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../componentes/marcas.html">Marcas</a></li>
+                <li><a href="../componentes/historia.html">Historia</a></li>
+                <li><a href="../componentes/nosotros.html">Nosotros</a></li>
+                <li class="registrar"><a href="#"><img src="../../assets/img/user.svg"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../assets/img/secion-articulos/v12.webp" alt="El Renacer del V12">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-meta">
+                    <span class="meta-text">// INGENIERÍA</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-text">8 MIN LECTURA</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-text">2024</span>
+                </div>
+                <h1 class="hero-title">El Renacer del V12</h1>
+                <p class="hero-subtitle">¿Por qué sigue emocionándonos en plena era eléctrica?</p>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <p>Hay motores que simplemente impulsan un automóvil. Y hay otros que despiertan emociones desde el primer instante en que cobran vida.</p>
+            <p>El V12 pertenece a esa segunda categoría.</p>
+            <p>Durante décadas, esta configuración se convirtió en el corazón de algunas de las máquinas más admiradas del mundo. No solo por su potencia, sino por la manera en la que entregaba cada aceleración, por la suavidad de su funcionamiento y por un sonido capaz de poner la piel de gallina incluso antes de comenzar a conducir.</p>
+            <p>Hoy, mientras la industria avanza hacia la electrificación y nuevas formas de movilidad, el V12 continúa ocupando un lugar especial en la memoria de quienes entienden que un automóvil puede ser mucho más que un medio de transporte.</p>
+
+            <h2>Una obra de ingeniería</h2>
+            <img src="../../assets/img/secion-articulos/v12-2.webp" alt="Motor V12">
+            <p class="image-caption">Configuración V12 — Doce cilindros en perfecta armonía</p>
+            <p>Un motor V12 está formado por doce cilindros distribuidos en dos bancadas de seis, creando una configuración en forma de "V". Esta arquitectura permite un equilibrio mecánico excepcional, reduciendo vibraciones y ofreciendo una entrega de potencia extremadamente suave y progresiva.</p>
+            <p>Más que una búsqueda de velocidad, el V12 representa una filosofía de ingeniería donde cada componente trabaja en perfecta armonía para ofrecer una experiencia refinada y emocionante.</p>
+
+            <h2>Más allá de la potencia</h2>
+            <p>Hablar de un V12 no significa hablar únicamente de cifras. Su verdadero encanto reside en las sensaciones.</p>
+            <p>La respuesta del acelerador, el sonido que acompaña cada cambio de revoluciones y la forma en la que entrega la potencia convierten cada recorrido en una experiencia difícil de olvidar.</p>
+
+            <h2>Los automóviles que hicieron historia</h2>
+            <img src="../../assets/img/secion-articulos/v12-3.webp" alt="Línea de tiempo V12">
+            <p class="image-caption">De la F50 al DBS — Una línea de tiempo de leyendas</p>
+            
+            <div class="list-item">
+                <h4>Ferrari F50</h4>
+                <p>Inspirado directamente en la Fórmula 1, llevó la competición a las calles como pocos automóviles han conseguido.</p>
+            </div>
+            <div class="list-item">
+                <h4>Lamborghini Diablo</h4>
+                <p>El superdeportivo que marcó toda una generación gracias a su diseño atrevido y su imponente motor V12.</p>
+            </div>
+            <div class="list-item">
+                <h4>Pagani Zonda</h4>
+                <p>Una combinación perfecta entre arte, fibra de carbono e ingeniería de precisión.</p>
+            </div>
+            <div class="list-item">
+                <h4>Ferrari 812 Superfast</h4>
+                <p>La demostración de que un V12 atmosférico todavía podía emocionar en pleno siglo XXI.</p>
+            </div>
+            <div class="list-item">
+                <h4>Aston Martin DBS</h4>
+                <p>Elegancia británica impulsada por una de las configuraciones mecánicas más refinadas jamás construidas.</p>
+            </div>
+
+            <h2>Un sonido imposible de reemplazar</h2>
+            <img src="../../assets/img/secion-articulos/v12-lambo.webp" alt="Sonido V12">
+            <p class="image-caption">La firma sonora del V12 — Una melodía mecánica inconfundible</p>
+            <p>Cada motor tiene personalidad. Pero pocos poseen una identidad tan reconocible como un V12. Su sonido cambia con las revoluciones, pasando de un funcionamiento refinado a una melodía mecánica que ha acompañado algunos de los deportivos más icónicos de la historia.</p>
+
+            <h2>Un futuro cada vez más exclusivo</h2>
+            <p>Las normativas medioambientales, la electrificación y el desarrollo de nuevas tecnologías han reducido progresivamente la presencia de los motores V12. Hoy sobreviven únicamente en modelos muy exclusivos, convirtiéndose en una de las últimas expresiones de una ingeniería que marcó una época.</p>
+            <p>Quizá su tiempo en las líneas de producción esté llegando a su fin. Pero su legado difícilmente desaparecerá.</p>
+
+            <h2>Más que un motor</h2>
+            <p>El V12 nunca fue únicamente una configuración mecánica. Representa una época en la que la ingeniería buscaba emocionar tanto como impresionar.</p>
+            <p class="article-highlight">Porque las cifras pueden quedar atrás.</p>
+            <p class="article-highlight">Las emociones permanecen.</p>
+        </article>
+
+        <!-- Navigation -->
+        <div class="article-navigation">
+            <a href="../../index.html" class="nav-link">← Volver al inicio</a>
+            <a href="porsche.html" class="nav-link">Siguiente: La Silueta Perfecta →</a>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="gold-line"></div>
+            <div class="footer-content">
+                <p class="footer-brand">AERO <span class="gold-accent">&</span> ASPHALT</p>
+                <p class="footer-text">Diseño, ingeniería y pasión reunidos en un mismo lugar.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aero & Asphalt. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/stilos.css" />
+  <link rel="stylesheet" href="../../css/footer.css" />
+  <link rel="stylesheet" href="../../css/historia.css" />
+  <title>Historia - Aero & Asphalt</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="logo"><a href="../../index.html">AERO <span class="gold-accent">&</span> ASPHALT</a></li>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="registrar"><a href="#"><img src="../../assets/img/user.svg"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-historia">
+      <div class="hero-background">
+        <img src="../../assets/img/historia/foto-principal.webp" alt="Historia">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">HISTORIA</h1>
+        <p class="hero-subtitle">Historias vivas • Leyendas automotrices</p>
+      </div>
+
+      <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Editorial Statement -->
+    <section class="editorial-section">
+      <div class="editorial-container">
+        <p class="editorial-text">
+          Cada vehículo cuenta una historia de <span class="highlight">pasión</span>,
+          <span class="highlight">ingeniería</span> y la búsqueda incansable
+          de la <span class="highlight">excelencia</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURED STORIES -->
+    <section class="featured-section">
+      <div class="featured-container">
+        <!-- Section Header -->
+        <div class="featured-header">
+          <div class="featured-label">Historias Destacadas</div>
+          <h2 class="featured-title">Leyendas que merecen ser contadas</h2>
+        </div>
+
+        <!-- Featured Story 1 -->
+        <a href="#" class="featured-card">
+          <div class="featured-grid">
+            <div class="featured-image-container">
+              <img src="../../assets/img/historia/mustang/Hardtop-Coupe-1965/principal.png" alt="Mustang 1965" class="featured-image">
+              <div class="featured-gradient"></div>
+            </div>
+            <div class="featured-content">
+              <div class="featured-category">Muscle Car</div>
+              <h3 class="featured-name">Ford Mustang Hardtop 1965</h3>
+              <p class="featured-description">
+                El automóvil que definió una generación y creó el segmento de los pony cars. Un ícono de la cultura americana que combinó estilo accesible con performance emocionante...
+                <span class="read-more">Ver más...</span>
+              </p>
+              <div class="featured-meta">
+                <div class="featured-meta-item">Ford</div>
+                <div class="meta-divider"></div>
+                <div class="featured-meta-item">271 HP</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Featured Story 2 -->
+        <a href="#" class="featured-card">
+          <div class="featured-grid reverse">
+            <div class="featured-image-container">
+              <img src="../../assets/img/historia/toyota/supra-mk4/principal.png" alt="Toyota Supra MK4" class="featured-image">
+              <div class="featured-gradient"></div>
+            </div>
+            <div class="featured-content">
+              <div class="featured-category">JDM Legend</div>
+              <h3 class="featured-name">Toyota Supra MK4</h3>
+              <p class="featured-description">
+                El 2JZ-GTE se convirtió en leyenda por su capacidad de manejar más de 1000 caballos de fuerza. El Supra MK4 definió la era dorada de los autos japoneses de los 90...
+                <span class="read-more">Ver más...</span>
+              </p>
+              <div class="featured-meta">
+                <div class="featured-meta-item">Toyota</div>
+                <div class="meta-divider"></div>
+                <div class="featured-meta-item">320 HP</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Featured Story 3 -->
+        <a href="#" class="featured-card">
+          <div class="featured-grid">
+            <div class="featured-image-container">
+              <img src="../../assets/img/historia/porsche/911-gt3/principal.jpg" alt="Porsche 911 GT3" class="featured-image">
+              <div class="featured-gradient"></div>
+            </div>
+            <div class="featured-content">
+              <div class="featured-category">German Engineering</div>
+              <h3 class="featured-name">Porsche 911 GT3</h3>
+              <p class="featured-description">
+                La evolución definitiva del 911 para circuito. Motor atmosférico de alta revolución, transmisión PDK de 7 velocidades y aerodinámica activa...
+                <span class="read-more">Ver más...</span>
+              </p>
+              <div class="featured-meta">
+                <div class="featured-meta-item">Porsche</div>
+                <div class="meta-divider"></div>
+                <div class="featured-meta-item">502 HP</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CATEGORY FILTER -->
+    <section class="filter-section">
+      <div class="filter-container">
+        <!-- Section Header -->
+        <div class="filter-header">
+          <div class="filter-label">Explorar por Categoría</div>
+          <h2 class="filter-title">Encuentra tu pasión</h2>
+
+          <!-- Filter Buttons -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterStories('todos')">Todos</button>
+            <button class="filter-btn" onclick="filterStories('muscle')">Muscle Cars</button>
+            <button class="filter-btn" onclick="filterStories('jdm')">JDM</button>
+            <button class="filter-btn" onclick="filterStories('europeo')">Europeo</button>
+            <button class="filter-btn" onclick="filterStories('supercar')">Supercars</button>
+            <button class="filter-btn" onclick="filterStories('clasico')">Clásicos</button>
+          </div>
+        </div>
+
+        <!-- History Grid -->
+        <div class="history-grid" id="historyGrid">
+          <!-- Story 1 -->
+          <a href="#" class="history-card" data-category="muscle">
+            <img src="../../assets/img/historia/camaro.png" alt="Chevrolet Camaro" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Muscle Car</div>
+              <h3 class="history-card-title">Chevrolet Camaro ZL1</h3>
+              <p class="history-card-brand">Chevrolet</p>
+              <p class="history-card-description">650 caballos de potencia americana pura...</p>
+            </div>
+          </a>
+
+          <!-- Story 2 -->
+          <a href="#" class="history-card" data-category="jdm">
+            <img src="../../assets/img/historia/honda/nsx/nsx.png" alt="Honda NSX" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">JDM</div>
+              <h3 class="history-card-title">Honda NSX</h3>
+              <p class="history-card-brand">Honda</p>
+              <p class="history-card-description">El supercar japonés que cambió el paradigma...</p>
+            </div>
+          </a>
+
+          <!-- Story 3 -->
+          <a href="#" class="history-card" data-category="europeo">
+            <img src="../../assets/img/historia/bmw/m3-e30/e30.png" alt="BMW M3 E30" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Europeo</div>
+              <h3 class="history-card-title">BMW M3 E30</h3>
+              <p class="history-card-brand">BMW</p>
+              <p class="history-card-description">El sedán que dominó los circuitos mundiales...</p>
+            </div>
+          </a>
+
+          <!-- Story 4 -->
+          <a href="#" class="history-card" data-category="supercar">
+            <img src="../../assets/img/historia/lamborghini/svj.jpeg" alt="Lamborghini Aventador" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Supercar</div>
+              <h3 class="history-card-title">Lamborghini Aventador</h3>
+              <p class="history-card-brand">Lamborghini</p>
+              <p class="history-card-description">V12 naturalmente aspirado en su máxima expresión...</p>
+            </div>
+          </a>
+
+          <!-- Story 5 -->
+          <a href="#" class="history-card" data-category="clasico">
+            <img src="../../assets/img/historia/jaguar/e-type.jpeg" alt="Jaguar E-Type" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Clásico</div>
+              <h3 class="history-card-title">Jaguar E-Type</h3>
+              <p class="history-card-brand">Jaguar</p>
+              <p class="history-card-description">El auto más hermoso del mundo según Enzo Ferrari...</p>
+            </div>
+          </a>
+
+          <!-- Story 6 -->
+          <a href="#" class="history-card" data-category="muscle">
+            <img src="../../assets/img/historia/challenger/challenger.png" alt="Dodge Challenger" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Muscle Car</div>
+              <h3 class="history-card-title">Dodge Challenger SRT</h3>
+              <p class="history-card-brand">Dodge</p>
+              <p class="history-card-description">El demonio de 797 caballos de fuerza...</p>
+            </div>
+          </a>
+
+          <!-- Story 7 - Nissan -->
+          <a href="#" class="history-card" data-category="jdm">
+            <img src="../../assets/img/historia/nissan/gtr35.png" alt="Nissan GT-R R35" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">JDM</div>
+              <h3 class="history-card-title">Nissan GT-R R35</h3>
+              <p class="history-card-brand">Nissan</p>
+              <p class="history-card-description">Godzilla: el supercar japonés que desafió a europeos...</p>
+            </div>
+          </a>
+
+          <!-- Story 8 - Ferrari -->
+          <a href="#" class="history-card" data-category="supercar">
+            <img src="../../assets/img/historia/ferrari/F458.jpeg" alt="Ferrari 458 Italia" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Supercar</div>
+              <h3 class="history-card-title">Ferrari 458 Italia</h3>
+              <p class="history-card-brand">Ferrari</p>
+              <p class="history-card-description">El V8 atmosférico más perfecto jamás creado...</p>
+            </div>
+          </a>
+
+          <!-- Story 9 - Bugatti -->
+          <a href="#" class="history-card" data-category="supercar">
+            <img src="../../assets/img/historia/bugatti/vyron.png" alt="Bugatti Veyron" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Supercar</div>
+              <h3 class="history-card-title">Bugatti Veyron</h3>
+              <p class="history-card-brand">Bugatti</p>
+              <p class="history-card-description">El primer auto de producción en superar 400 km/h...</p>
+            </div>
+          </a>
+
+          <!-- Story 10 - Mercedes -->
+          <a href="#" class="history-card" data-category="europeo">
+            <img src="../../assets/img/historia/mercedes/amg-gt.png" alt="Mercedes AMG GT" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Europeo</div>
+              <h3 class="history-card-title">Mercedes AMG GT</h3>
+              <p class="history-card-brand">Mercedes</p>
+              <p class="history-card-description">El heredero espiritual del SLS AMG...</p>
+            </div>
+          </a>
+
+          <!-- Story 11 - Audi -->
+          <a href="#" class="history-card" data-category="europeo">
+            <img src="../../assets/img/historia/audi/r8.png" alt="Audi R8" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Europeo</div>
+              <h3 class="history-card-title">Audi R8</h3>
+              <p class="history-card-brand">Audi</p>
+              <p class="history-card-description">Tecnología de Fórmula 1 en las calles...</p>
+            </div>
+          </a>
+
+          <!-- Story 12 - McLaren -->
+          <a href="#" class="history-card" data-category="supercar">
+            <img src="../../assets/img/historia/mclaren/M720.png" alt="McLaren 720S" class="history-image">
+            <div class="history-card-gradient"></div>
+            <div class="history-card-content">
+              <div class="history-card-category">Supercar</div>
+              <h3 class="history-card-title">McLaren 720S</h3>
+              <p class="history-card-brand">McLaren</p>
+              <p class="history-card-description">El supercar más completo del mundo...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy-section">
+      <div class="philosophy-container">
+        <div class="philosophy-label">Nuestra Filosofía</div>
+        <p class="philosophy-quote">
+          "Un automóvil no es solo una máquina. Es el resultado de la pasión,
+          la ingeniería y el arte de quienes lo soñaron.
+          En nuestra colección, cada vehículo tiene una historia que merece ser preservada."
+        </p>
+        <div class="philosophy-footer">
+          <div class="philosophy-line"></div>
+          <div class="philosophy-stats">6 historias vivas</div>
+          <div class="philosophy-line"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="gold-line"></div>
+      <div class="footer-content">
+        <p class="footer-brand">AERO <span class="gold-accent">&</span> ASPHALT</p>
+        <p class="footer-text">Diseño, ingeniería y pasión reunidos en un mismo lugar.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">YouTube</a>
+          <a href="#" class="social-link">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aero & Asphalt. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/historia.js"></script>
+  <script src="../../js/carousel.js"></script>
+</body>
+</html>
