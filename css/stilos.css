@@ -104,6 +104,73 @@ ul li.registrar img {
     vertical-align: middle;
 }
 
+/* responsive navbar*/
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--color-accent);
+    position: absolute;
+    top: 100%
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  ul.active-menu {
+    max-height: 400px;
+    padding: 10px 0 20px 0;
+  }
+
+  menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  menu-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px
+  }
+
+  menu-toggle button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  ul li a {
+    padding: 12px 20px;
+    text-align: left;
+  }
+
+  ul li.logo {
+    width: 100%
+  }
+
+  ul li a::after {
+    display: none;
+  }
+}
+
 /* Carrusel */
 
 .carousel {
