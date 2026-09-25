@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stilos.css" />  <link rel="stylesheet" href="css/footer.css" /> <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/stilo-articulos.css"> 
+    <link rel="stylesheet" href="css/stilo-articulos.css">
+    <link rel="stylesheet" href="css/bmw-section.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <title>Aero & Asphalt</title>
 </head>
@@ -87,30 +88,24 @@
       <!-- Línea dorada decorativa abajo -->
       <div class="gold-line bottom-line"></div>
     </div>
-    
-    <!-- BMW Section -->
-    <section class="bmw-section">
+        
+        <!-- BMW Section -->
+        <section class="bmw-section">
       <div class="bmw-container">
-        <!-- Contenedor principal -->
         <div class="bmw-grid">
         
-          <!-- Columna Principal (Imagen y Texto) -->
+          <!-- Columna Principal (Desktop) -->
           <div class="main-content-col">
             <div class="image-wrapper">
-              <img
-                src="assets/img/Bmw-section/img-principal.webp"
-                alt="BMW M4 G82"
-                class="bg-image"
-              />
-              <!-- Texto superpuesto en la imagen -->
+              <img src="assets/img/Bmw-section/img-principal.webp" alt="BMW M4 G82" class="bg-image" />
               <div class="image-overlay">
                 <h2 class="car-subtitle">BMW M4 G82</h2>
                 <h1 class="car-title">La perfección<br>alemana</h1>
                 <p class="car-description">Potencia, elegancia y tecnología de vanguardia en un solo paquete</p>
               </div>
             </div>
-
-            <!-- Datos técnicos BMW M4 G82 -->
+          
+            <!-- Specs: visibles en desktop Y móvil -->
             <div class="tech-specs">
               <div class="specs-grid">
                 <div class="spec-item">
@@ -136,9 +131,9 @@
               </div>
             </div>
           </div>
-
-          <!-- Imágenes secundarias -->
-          <div class="secondary-images-col">
+        
+          <!-- Imágenes secundarias (solo Desktop) -->
+          <div class="secondary-images-col desktop-secondary-images">
             <div class="secondary-image-wrapper">
               <img src="assets/img/Bmw-section/img-second.webp" alt="BMW M4 detalle" class="secondary-img" />
             </div>
@@ -149,11 +144,66 @@
               <img src="assets/img/Bmw-section/img-second-3.webp" alt="BMW M4 motor" class="secondary-img" />
             </div>
           </div>
-
+        
+          <!-- Carrusel UNIFICADO (solo Móvil): principal + secundarias -->
+          <div class="mobile-bmw-carousel">
+            <div class="carousel" data-carousel="bmw-unified">
+              <div class="carousel-slide active">
+                <img src="assets/img/Bmw-section/img-principal.webp" alt="BMW M4 G82">
+                <div class="carousel-overlay">
+                  <h2 class="car-subtitle">BMW M4 G82</h2>
+                  <h1 class="car-title">La perfección<br>alemana</h1>
+                  <p class="car-description">Potencia, elegancia y tecnología de vanguardia en un solo paquete</p>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/img/Bmw-section/img-second.webp" alt="BMW M4 detalle">
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/img/Bmw-section/img-second-2.webp" alt="BMW M4 interior">
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/img/Bmw-section/img-second-3.webp" alt="BMW M4 motor">
+              </div>
+              <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+              </div>
+            </div>
+          
+            <!-- Specs debajo del carrusel, en móvil -->
+            <div class="tech-specs mobile-specs">
+              <div class="specs-grid">
+                <div class="spec-item">
+                  <p class="spec-label">Motor</p>
+                  <p class="spec-value">3.0L Twin-Turbo</p>
+                  <p class="spec-sub">S58 Inline-6</p>
+                </div>
+                <div class="spec-item">
+                  <p class="spec-label">Potencia</p>
+                  <p class="spec-value">503 HP</p>
+                  <p class="spec-sub">3,750 - 7,250 RPM</p>
+                </div>
+                <div class="spec-item">
+                  <p class="spec-label">Peso</p>
+                  <p class="spec-value">1,725 kg</p>
+                  <p class="spec-sub">Coupé</p>
+                </div>
+                <div class="spec-item">
+                  <p class="spec-label">0-100 km/h</p>
+                  <p class="spec-value">3.9 s</p>
+                  <p class="spec-sub">M DCT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
         </div>
       </div>
     </section>
-    
+        
     <section class="hero-containers">
         <div class="container">
             <div class="gold-line top-line"></div>
@@ -351,6 +401,7 @@
   </footer>
 
     <script src="js/carousel.js"></script>
+    <script src="js/bmw-carousel.js"></script>
     <script src="js/menu-hamburger.js"></script>
 </body>
 </html>
