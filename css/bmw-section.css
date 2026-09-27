@@ -141,11 +141,11 @@
   height: 100%;
 }
 
-.mobile-bmw-carousel {
+.mobile-bmw-hero,
+.mobile-secondary-carousel {
   display: none;
 }
 
-/* Ocultar specs móviles en desktop */
 .mobile-specs {
   display: none;
 }
@@ -160,18 +160,56 @@
     gap: 24px;
   }
 
-  /* Ocultar todo el bloque desktop (imagen principal + specs de esa columna) */
   .main-content-col,
   .desktop-secondary-images {
     display: none;
   }
 
-  /* Mostrar el carrusel unificado */
-  .mobile-bmw-carousel {
+  /* --- HERO: caja fija propia, ya no depende del carrusel --- */
+  .mobile-bmw-hero {
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .mobile-bmw-hero .hero-img {
+    width: 100%;
+    height: auto;
     display: block;
   }
 
-  .mobile-bmw-carousel .carousel {
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 20px 16px;
+  }
+
+  .hero-overlay .car-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+  }
+
+  .hero-overlay .car-title {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+  }
+
+  .hero-overlay .car-description {
+    font-size: 0.875rem;
+  }
+
+  /* --- GALERÍA SECUNDARIA: otra caja fija, distinta a la del hero --- */
+  .mobile-secondary-carousel {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .mobile-secondary-carousel .carousel {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 10;
@@ -179,7 +217,7 @@
     border-radius: 8px;
   }
 
-  .mobile-bmw-carousel .carousel-slide {
+  .mobile-secondary-carousel .carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -189,50 +227,26 @@
     transition: opacity 0.5s ease-in-out;
   }
 
-  .mobile-bmw-carousel .carousel-slide.active {
+  .mobile-secondary-carousel .carousel-slide.active {
     opacity: 1;
     position: relative;
   }
 
-  .mobile-bmw-carousel .carousel-slide img {
+  .mobile-secondary-carousel .carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  /* Overlay de texto solo en el primer slide */
-  .carousel-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    padding: 20px 16px;
-  }
-
-  .carousel-overlay .car-subtitle {
-    font-size: 1.125rem;
-    margin-bottom: 4px;
-  }
-
-  .carousel-overlay .car-title {
-    font-size: 1.75rem;
-    margin-bottom: 8px;
-  }
-
-  .carousel-overlay .car-description {
-    font-size: 0.875rem;
-  }
-
-  .mobile-bmw-carousel .carousel-indicators {
+  .mobile-secondary-carousel .carousel-indicators {
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-top: 12px;
   }
 
-  .mobile-bmw-carousel .indicator {
+  .mobile-secondary-carousel .indicator {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -241,11 +255,11 @@
     transition: background-color 0.3s;
   }
 
-  .mobile-bmw-carousel .indicator.active {
+  .mobile-secondary-carousel .indicator.active {
     background-color: #B8963E;
   }
 
-  /* Specs debajo del carrusel en móvil */
+  /* --- SPECS: sin cambios, solo reordenadas en el HTML --- */
   .mobile-specs {
     display: block;
     padding: 24px 0 0 0;

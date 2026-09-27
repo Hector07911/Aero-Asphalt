@@ -145,18 +145,46 @@
             </div>
           </div>
         
-          <!-- Carrusel UNIFICADO (solo Móvil): principal + secundarias -->
-          <div class="mobile-bmw-carousel">
-            <div class="carousel" data-carousel="bmw-unified">
-              <div class="carousel-slide active">
-                <img src="assets/img/Bmw-section/img-principal.webp" alt="BMW M4 G82">
-                <div class="carousel-overlay">
-                  <h2 class="car-subtitle">BMW M4 G82</h2>
-                  <h1 class="car-title">La perfección<br>alemana</h1>
-                  <p class="car-description">Potencia, elegancia y tecnología de vanguardia en un solo paquete</p>
-                </div>
+          <!-- Hero móvil: imagen fija, SIN carrusel, con su overlay de texto -->
+          <div class="mobile-bmw-hero">
+            <img src="assets/img/Bmw-section/img-principal.webp" alt="BMW M4 G82" class="hero-img">
+            <div class="hero-overlay">
+              <h2 class="car-subtitle">BMW M4 G82</h2>
+              <h1 class="car-title">La perfección<br>alemana</h1>
+              <p class="car-description">Potencia, elegancia y tecnología de vanguardia en un solo paquete</p>
+            </div>
+          </div>
+
+          <!-- Specs debajo del hero -->
+          <div class="tech-specs mobile-specs">
+            <div class="specs-grid">
+              <div class="spec-item">
+                <p class="spec-label">Motor</p>
+                <p class="spec-value">3.0L Twin-Turbo</p>
+                <p class="spec-sub">S58 Inline-6</p>
               </div>
-              <div class="carousel-slide">
+              <div class="spec-item">
+                <p class="spec-label">Potencia</p>
+                <p class="spec-value">503 HP</p>
+                <p class="spec-sub">3,750 - 7,250 RPM</p>
+              </div>
+              <div class="spec-item">
+                <p class="spec-label">Peso</p>
+                <p class="spec-value">1,725 kg</p>
+                <p class="spec-sub">Coupé</p>
+              </div>
+              <div class="spec-item">
+                <p class="spec-label">0-100 km/h</p>
+                <p class="spec-value">3.9 s</p>
+                <p class="spec-sub">M DCT</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carrusel secundario: solo imágenes de detalle, sin texto -->
+          <div class="mobile-secondary-carousel">
+            <div class="carousel" data-carousel="bmw-secondary">
+              <div class="carousel-slide active">
                 <img src="assets/img/Bmw-section/img-second.webp" alt="BMW M4 detalle">
               </div>
               <div class="carousel-slide">
@@ -169,33 +197,6 @@
                 <span class="indicator active"></span>
                 <span class="indicator"></span>
                 <span class="indicator"></span>
-                <span class="indicator"></span>
-              </div>
-            </div>
-          
-            <!-- Specs debajo del carrusel, en móvil -->
-            <div class="tech-specs mobile-specs">
-              <div class="specs-grid">
-                <div class="spec-item">
-                  <p class="spec-label">Motor</p>
-                  <p class="spec-value">3.0L Twin-Turbo</p>
-                  <p class="spec-sub">S58 Inline-6</p>
-                </div>
-                <div class="spec-item">
-                  <p class="spec-label">Potencia</p>
-                  <p class="spec-value">503 HP</p>
-                  <p class="spec-sub">3,750 - 7,250 RPM</p>
-                </div>
-                <div class="spec-item">
-                  <p class="spec-label">Peso</p>
-                  <p class="spec-value">1,725 kg</p>
-                  <p class="spec-sub">Coupé</p>
-                </div>
-                <div class="spec-item">
-                  <p class="spec-label">0-100 km/h</p>
-                  <p class="spec-value">3.9 s</p>
-                  <p class="spec-sub">M DCT</p>
-                </div>
               </div>
             </div>
           </div>

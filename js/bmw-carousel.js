@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const bmwCarousel = document.querySelector('.carousel[data-carousel="bmw-unified"]');
+  const bmwCarousel = document.querySelector('.carousel[data-carousel="bmw-secondary"]'); // <-- único cambio
   if (!bmwCarousel) return;
 
   const mediaQuery = window.matchMedia('(max-width: 768px)');
