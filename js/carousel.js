@@ -53,8 +53,7 @@ function setActiveNavLink() {
 // Ejecutar al cargar la página
 document.addEventListener('DOMContentLoaded', setActiveNavLink);
 
-
-// Carrusel de artículos (track con botones prev/next + dots)
+// Carrusel de artículos con Scroll Snap nativo
 document.addEventListener('DOMContentLoaded', function () {
   const track = document.getElementById('carouselTrack');
   const prevBtn = document.getElementById('prevBtn');
@@ -65,39 +64,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const cards = track.querySelectorAll('.article-card');
   const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
-  let currentIndex = 0;
 
+  // Función para ir a una tarjeta específica usando el scroll nativo
   function goToSlide(index) {
     if (index < 0) index = cards.length - 1;
     if (index >= cards.length) index = 0;
 
-    currentIndex = index;
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    track.style.transform = `translateX(-${index * (cardWidth + gap)}px)`;
-
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    // Calculamos la posición exacta basándonos en el ancho del contenedor del track
+    const scrollPosition = index * track.clientWidth;
+    
+    track.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
   }
 
-  nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-  prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  // Actualizar los puntos activos según la posición actual del scroll
+  function updateDots() {
+    if (!dots.length) return;
+    const index = Math.round(track.scrollLeft / track.clientWidth);
+    
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
 
+  // Eventos de botones
+  nextBtn.addEventListener('click', () => {
+    const currentIndex = Math.round(track.scrollLeft / track.clientWidth);
+    goToSlide(currentIndex + 1);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    const currentIndex = Math.round(track.scrollLeft / track.clientWidth);
+    goToSlide(currentIndex - 1);
+  });
+
+  // Eventos de los puntos indicadores (dots)
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => goToSlide(i));
   });
 
-  let touchStartX = 0;
-  track.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
+  // Sincronizar los puntos cuando el usuario desliza con el dedo
+  track.addEventListener('scroll', () => {
+    updateDots();
   });
-  track.addEventListener('touchend', (e) => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) {
-      diff > 0 ? goToSlide(currentIndex + 1) : goToSlide(currentIndex - 1);
-    }
-  });
-
-  window.addEventListener('resize', () => goToSlide(currentIndex));
-
-  goToSlide(0);
 });

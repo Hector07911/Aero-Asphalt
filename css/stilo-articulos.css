@@ -90,35 +90,54 @@
 }
 
 /* Estilos específicos para el carrusel de artículos móviles */
+/* Contenedor principal del carrusel móvil */
 .mobile-carousel {
   position: relative;
   display: block;
+  width: 100%;
 }
 
 .carousel-track-container {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden; /* Oculta la barra de desplazamiento nativa */
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-out;
-  width: 100%;
+  gap: 1rem; /* Espacio opcional entre tarjetas, o déjalo en 0 si quieres que ocupen todo */
+  overflow-x: auto; /* Permite el desplazamiento horizontal con el dedo */
+  scroll-snap-type: x mandatory; /* Fuerza a que cada tarjeta encaje perfectamente al deslizar */
+  scroll-behavior: smooth; /* Hace que el movimiento por código sea suave */
+  -webkit-overflow-scrolling: touch; /* Desplazamiento fluido en iOS */
+  padding-bottom: 0.5rem;
 }
 
+/* Ocultar barra de desplazamiento en navegadores modernos */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Cada tarjeta toma el 100% del ancho visible de forma independiente */
 .mobile-carousel .article-card {
   min-width: 100%;
-  flex-shrink: 0;
+  max-width: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: start; /* Define el punto de ajuste al inicio de la tarjeta */
+  box-sizing: border-box;
 }
 
-/* Botones de navegación del carrusel de artículos */
+/* Botones de navegación (opcionales si prefieres solo deslizar con el dedo) */
 .carousel-btn {
   position: absolute;
-  top: 40%;
+  top: 35%;
   transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   border-radius: 50%;
@@ -127,23 +146,13 @@
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: background-color 0.3s;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+.prev-btn { left: 0.5rem; }
+.next-btn { right: 0.5rem; }
 
-.prev-btn {
-  left: 0.5rem;
-}
-
-.next-btn {
-  right: 0.5rem;
-}
-
-/* Puntos indicadores del carrusel de artículos */
+/* Puntos indicadores */
 .carousel-dots {
   display: flex;
   justify-content: center;
