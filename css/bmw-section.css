@@ -1,27 +1,32 @@
-/* BMW Section Styles - Archivo separado para evitar conflictos */
+/* BMW Section Styles */
 
-/* Estilos Desktop (base) */
+/* ==========================================
+   DESKTOP (base)
+   ========================================== */
 .bmw-section {
   width: 100%;
   background-color: #000000;
-  padding: 32px 80px 64px 80px;
+  padding: 32px 0 64px 0;
 }
 
 .bmw-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
+/* minmax(0, 1fr): evita que el contenido empuje la columna más allá de la pantalla */
 .bmw-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 32px;
 }
 
-/* Columna Principal (8 columnas) */
+/* Columna principal (8 columnas) */
 .main-content-col {
   grid-column: span 8;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -49,12 +54,13 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  padding: 32px;
+  padding: clamp(16px, 2.5vw, 32px);
 }
 
+/* Tipografía fluida: en 769px-1000px el texto ya no tapa toda la imagen */
 .car-subtitle {
   color: #B8963E;
-  font-size: 1.875rem;
+  font-size: clamp(1.125rem, 2.4vw, 1.875rem);
   font-weight: bold;
   letter-spacing: 0.1em;
   margin-bottom: 8px;
@@ -62,27 +68,28 @@
 
 .car-title {
   color: #ffffff;
-  font-size: 3.75rem;
+  font-size: clamp(1.75rem, 4.2vw, 3.75rem);
   font-weight: 900;
   letter-spacing: -0.05em;
-  margin-bottom: 16px;
+  line-height: 1.05;
+  margin-bottom: clamp(8px, 1.4vw, 16px);
 }
 
 .car-description {
   color: #d4d4d4;
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   font-weight: 500;
 }
 
-/* Datos Técnicos Desktop */
+/* Datos técnicos desktop */
 .tech-specs {
-  padding: 32px;
+  padding: clamp(8px, 2vw, 32px);
 }
 
 .specs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
 }
 
 .spec-item {
@@ -98,7 +105,7 @@
 
 .spec-value {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
   font-weight: bold;
 }
 
@@ -108,9 +115,10 @@
   margin-top: 4px;
 }
 
-/* Imágenes Secundarias Desktop (4 columnas) */
+/* Imágenes secundarias desktop (4 columnas) */
 .secondary-images-col {
   grid-column: span 4;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -133,7 +141,7 @@
   object-fit: cover;
 }
 
-/* Desktop vs Mobile - BMW Section */
+/* Desktop vs móvil */
 .desktop-secondary-images {
   display: flex;
   flex-direction: column;
@@ -142,21 +150,25 @@
 }
 
 .mobile-bmw-hero,
-.mobile-secondary-carousel {
-  display: none;
-}
-
+.mobile-secondary-carousel,
 .mobile-specs {
   display: none;
 }
 
+/* ==========================================
+   TABLET / MÓVIL (max 768px)
+   ========================================== */
 @media (max-width: 768px) {
   .bmw-section {
-    padding: 24px 16px 48px 16px;
+    padding: 24px 0 48px 0;
+  }
+
+  .bmw-container {
+    padding: 0 16px;
   }
 
   .bmw-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 
@@ -165,7 +177,7 @@
     display: none;
   }
 
-  /* --- HERO: caja fija propia, ya no depende del carrusel --- */
+  /* --- HERO móvil --- */
   .mobile-bmw-hero {
     display: block;
     position: relative;
@@ -174,13 +186,16 @@
     overflow: hidden;
   }
 
+  /* Altura estable: el texto siempre cabe aunque la pantalla sea muy angosta */
   .mobile-bmw-hero .hero-img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     display: block;
   }
 
-  .hero-overlay {
+  /* Scoped: ya no choca con .hero-overlay de historia.css / marcas.css */
+  .mobile-bmw-hero .hero-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -195,7 +210,7 @@
   }
 
   .hero-overlay .car-title {
-    font-size: 1.75rem;
+    font-size: clamp(1.4rem, 7vw, 1.75rem);
     margin-bottom: 8px;
   }
 
@@ -203,7 +218,7 @@
     font-size: 0.875rem;
   }
 
-  /* --- GALERÍA SECUNDARIA: otra caja fija, distinta a la del hero --- */
+  /* --- GALERÍA secundaria --- */
   .mobile-secondary-carousel {
     display: block;
     margin-top: 8px;
@@ -227,9 +242,9 @@
     transition: opacity 0.5s ease-in-out;
   }
 
+  /* Ya NO position: relative: empujaba los indicadores fuera de la caja y quedaban ocultos */
   .mobile-secondary-carousel .carousel-slide.active {
     opacity: 1;
-    position: relative;
   }
 
   .mobile-secondary-carousel .carousel-slide img {
@@ -239,18 +254,23 @@
     display: block;
   }
 
+  /* Indicadores dentro de la imagen, siempre visibles */
   .mobile-secondary-carousel .carousel-indicators {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    z-index: 2;
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 12px;
   }
 
   .mobile-secondary-carousel .indicator {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #737373;
+    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background-color 0.3s;
   }
@@ -259,7 +279,7 @@
     background-color: #B8963E;
   }
 
-  /* --- SPECS: sin cambios, solo reordenadas en el HTML --- */
+  /* --- SPECS móvil (scroll horizontal) --- */
   .mobile-specs {
     display: block;
     padding: 24px 0 0 0;

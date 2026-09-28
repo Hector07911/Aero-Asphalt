@@ -1,33 +1,3 @@
-// Carrusel principal - Solo se ejecuta si existe en la página
-// Carrusel principal (hero) - scoped para no chocar con otros carruseles
-const heroCarousel = document.getElementById('heroCarousel');
-
-if (heroCarousel) {
-  const slides = heroCarousel.querySelectorAll('.carousel-slide');
-  const indicators = heroCarousel.querySelectorAll('.indicator');
-  let currentSlide = 0;
-  const slideInterval = 4000;
-
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(indicator => indicator.classList.remove('active'));
-    slides[index].classList.add('active');
-    indicators[index].classList.add('active');
-    currentSlide = index;
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  setInterval(nextSlide, slideInterval);
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => showSlide(index));
-  });
-}
-
 // Sistema de navegación activa - Marca el enlace actual
 function setActiveNavLink() {
     const currentPath = window.location.pathname;
@@ -110,3 +80,65 @@ document.addEventListener('DOMContentLoaded', function () {
     updateDots();
   });
 });
+
+(() => {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+
+  const mqDesktop = window.matchMedia('(min-width: 601px)');
+  const mqReduce  = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // Ahorro de datos / conexión lenta
+  const conn = navigator.connection || {};
+  const saveData = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '');
+
+  let video = null;
+
+  function createVideo() {
+    video = document.createElement('video');
+    video.className = 'hero__video';
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.preload = 'metadata';
+    video.setAttribute('muted', '');
+    video.setAttribute('aria-hidden', 'true');
+
+    [
+      { src: hero.dataset.webm, type: 'video/webm' },
+      { src: hero.dataset.mp4,  type: 'video/mp4' }
+    ].forEach(({ src, type }) => {
+      if (!src) return;
+      const source = document.createElement('source');
+      source.src = src;
+      source.type = type;
+      video.appendChild(source);
+    });
+
+    // Fade-in cuando realmente empieza a reproducirse
+    video.addEventListener('playing', () => video.classList.add('is-playing'), { once: true });
+
+    hero.prepend(video);
+    video.play().catch(() => { /* si falla el autoplay, queda la imagen */ });
+  }
+
+  function init() {
+    if (video) return; // ya cargado
+    if (!mqDesktop.matches || mqReduce.matches || saveData) return;
+    createVideo();
+  }
+
+  init();
+
+  // Si el usuario agranda la ventana (o gira la tablet), carga el video entonces
+  mqDesktop.addEventListener('change', init);
+
+  // Pausa el video cuando el hero no se ve (ahorra CPU y batería)
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      if (!video) return;
+      entry.isIntersecting ? video.play().catch(() => {}) : video.pause();
+    }, { threshold: 0.1 }).observe(hero);
+  }
+})();
