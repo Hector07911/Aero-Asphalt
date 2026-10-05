@@ -143,7 +143,7 @@ a {
 
         clip: rect(0, auto, auto, 0);
 
-        background-image: url(../../assets/img/marcas/ferrari/hero.png);
+        background-image: url(../../assets/img/marcas/ferrari/hero.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -173,7 +173,7 @@ a {
             width: 819px;
             height: 1621px;
 
-            background-image: url(../../assets/img/marcas/ferrari/hero.png);
+            background-image: url(../../assets/img/marcas/ferrari/hero.jpg);
         }
         &--secondary {
             top: 0;
@@ -183,7 +183,7 @@ a {
             height: 500px;
 
             background-size: 300px auto;
-            background-image: url(../../assets/img/marcas/ferrari/hero.png);
+            background-image: url(../../assets/img/marcas/ferrari/hero.jpg);
         }
     }
     .hero__title {
