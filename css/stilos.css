@@ -359,7 +359,7 @@ nav {
     width: 100%;
     height: clamp(420px, 56vw, 650px);
     overflow: hidden;
-    background: #000 url("../assets/img/hero/hero-1.jpeg") center / cover no-repeat;
+    background: #000 url("../assets/img/hero/hero1.webp") center / cover no-repeat;
 }
 
 .hero__video {
